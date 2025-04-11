@@ -1,14 +1,16 @@
 
+import "./MainNav.css";
+
 export default function MainNav() {
 
     return(
         <nav className="nav">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Portfolio</li>
-                <li>Website Features</li>
+            <ul className="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Features</a></li>
             </ul> 
         </nav>
     )

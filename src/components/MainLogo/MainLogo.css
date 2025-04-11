@@ -1,0 +1,14 @@
+
+
+img{
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    position: fixed;
+    top: 0px;
+    left: 0px; 
+    z-index: 1001;
+    background-color: #183B4E ;
+
+}

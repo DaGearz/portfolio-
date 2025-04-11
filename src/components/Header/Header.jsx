@@ -1,14 +1,26 @@
 
-import MainNav from "./MainNav"
-import mainlogo from "../assets/website_logo.png"
 
-export default function Header() {
+import mainlogo from "../../assets/website_logo.png"
+import MainNav from "../MainNav/MainNav"
+import "./Header.css"
 
+export default function Header({className}) {
+
+    const headerClass = className === "header"
+    ? 'header'
+    : 'not-header'
 
     return (
-        <header>
-            <div className="logo"><img src={mainlogo} /></div>
-            <MainNav />
+        <header className={headerClass}>">
+            
+            <div className="main-container">
+                <span>Todd Williams | Software Alchemist</span>
+                <div className="main-nav">
+                    <MainNav />
+                </div>
+                
+            </div>
+
         </header>
     )
 }
