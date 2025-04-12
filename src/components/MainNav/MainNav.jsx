@@ -1,5 +1,5 @@
 
-import "./MainNav.css";
+import "./MainNav.module.css";
 
 export default function MainNav() {
 

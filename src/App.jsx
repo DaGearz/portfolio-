@@ -10,7 +10,7 @@ import {Routes, Route} from 'react-router-dom'
 //#DDA853 
 
 function App() {
-  console.log("Window width: " + window.innerWidth + "px");
+  
   return (
     <>
       <Routes>

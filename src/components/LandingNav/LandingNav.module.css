@@ -1,0 +1,40 @@
+
+
+.nav{
+    font font-family: "inter", sans-serif;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 2px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list a{
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #27548A;
+    padding: 0.5rem 1rem;
+
+
+}
+
+
+
+nav a:visited{
+  text-decoration: none;    /* Remove underline on hover, active, visited, and focus */
+  color: 183B4E;           /* Ensure color remains unchanged */
+}
+
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  text-decoration: none;    /* Remove underline on hover, active, visited, and focus */
+  color: #183B4E;
+  background-color: #DDA853;           /* Ensure color remains unchanged */
+}

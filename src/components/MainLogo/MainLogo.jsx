@@ -1,5 +1,5 @@
 import mainlogo from "../../assets/website_logo.png"
-import "./MainLogo.css"
+import "./MainLogo.module.css"
 
 export  default function MainLogo() {
 

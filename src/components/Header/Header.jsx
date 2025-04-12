@@ -2,7 +2,7 @@
 
 import mainlogo from "../../assets/website_logo.png"
 import MainNav from "../MainNav/MainNav"
-import "./Header.css"
+import "./Header.module.css"
 
 export default function Header({className}) {
 

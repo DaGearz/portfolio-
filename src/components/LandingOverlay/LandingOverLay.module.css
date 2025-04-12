@@ -1,0 +1,13 @@
+
+.landing-overlay{
+    
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40000;
+    background-color: hsla(213, 56%, 35%, 0.774);
+    
+
+}
