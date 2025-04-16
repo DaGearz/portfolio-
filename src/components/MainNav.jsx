@@ -1,11 +1,11 @@
 
-import "./MainNav.module.css";
+import styles from "../modules.css/MainNav.module.css";
 
 export default function MainNav() {
 
     return(
-        <nav className="nav">
-            <ul className="nav-list">
+        <nav className={styles.nav}>
+            <ul className={styles["nav-list"]}>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>

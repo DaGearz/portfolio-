@@ -1,6 +1,6 @@
 
 import './App.css'
-import Home from './pages/Home/Home'
+import Home from './pages/Home'
 import {Routes, Route} from 'react-router-dom'
 
 //color scheme https://colorhunt.co/palette/f5eedc27548a183b4edda853
