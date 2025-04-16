@@ -16,6 +16,7 @@ export default function Home() {
             </div>
             <div className={`${styles["footer-container"]} ${styles["container"]}`}>
             </div>*/}
+            <div className={styles["landing-overlay"]}> <LandingOverlay /></div>
         </div>
     )
 }

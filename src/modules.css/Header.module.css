@@ -38,7 +38,7 @@
 
 
 
-  @media (min-width: 800px) and (max-width: 1060px) {
+  @media  (max-width: 1060px) {
     .title{
         color: #183B4E;
         font-size: 1.7rem;
@@ -50,10 +50,7 @@
         display: none;
     }
 
-    .l5, .l6, .o4, .o5{
-        display: none;
-    }
-
+    
     .li7{
         display: inline-block;
     }
