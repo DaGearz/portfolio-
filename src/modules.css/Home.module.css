@@ -1,26 +1,3 @@
-
-
-.container, .home-container{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    
+.landing-overlay{
+    display: none;
 }
-
-.home-container{
-    min-height: 100vh;
-    display: Flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-@media (max-width: 650px) {
-   
-  }
-
-
