@@ -2,4 +2,29 @@
     height: 4rem;
     width: 100%;
     background-color: #F5EEDC;
+    box-shadow: 0 2px 3px #183B4E;
+    display: flex;
 }
+
+img{
+    border: 2px solid #183B4E;
+    position: relative;
+    height: 10rem;
+    border-radius: 50%;
+    
+}
+
+.header-content-container{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.title{
+    color: #183B4E;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+

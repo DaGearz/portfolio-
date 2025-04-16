@@ -3,17 +3,24 @@
 
 import MainNav from "./MainNav"
 import styles from "../modules.css/Header.module.css"
+import mainlogo from "../assets/website_logo.png"
 
+export default function Header() {
 
-export default function Header({className}) {
-
-    {/*const styles["header-container"] = className === "header"
-    ? 'header'
-    : 'not-header'*/}
-
+    
     return (
+     
         <div className={styles["header-container"]}>
-            
+            <img 
+                src={mainlogo}
+                alt="my logo combining love fro coding and hiking. It also reference my engineering degree"
+            />
+            <div className={styles["header-content-container"]}>
+                <div className={styles.title}>Todd Williams aka DaGearz</div>
+                <div className={styles["nav-bar"]}>
+                    <MainNav />
+                </div>
+            </div>
         </div>
     )
 }
