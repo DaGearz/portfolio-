@@ -19,8 +19,13 @@
 }
 
 
-@media (max-width: 650px) {
-   
-  }
+.body-container{
+    flex-grow: 1;
+}
 
+.footer-container{
+    margin-top: auto;
+    color: #27548A;
+    background-color: #DDA853;
+}
 
