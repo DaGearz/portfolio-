@@ -6,13 +6,6 @@
     display: flex;
 }
 
-img{
-    border: 2px solid #183B4E;
-    position: relative;
-    height: 10rem;
-    border-radius: 50%;
-    
-}
 
 .header-content-container{
     flex-grow: 1;
@@ -22,9 +15,104 @@ img{
     
 }
 
-.title{
-    color: #183B4E;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+@media (min-width: 1000px) {
+    .title{
+        color: #183B4E;
+        font-size: 1.7rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #183B4E;;
+    }
 
+    .title2, .title3, .title4{
+        display: none;
+    }
+
+    img{
+        border: 2px solid #183B4E;
+        position: relative;
+        height: 10rem;
+        border-radius: 50%;
+        box-shadow: 0 0 4px 2px #183B4E;;
+    }
+  }
+
+
+
+  @media (min-width: 800px) and (max-width: 1000px) {
+    .title{
+        color: #183B4E;
+        font-size: 1.7rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #183B4E;;
+        
+    }
+    .title1, .title3, .title4{
+        display: none;
+    }
+
+    img{
+        border: 2px solid #183B4E;
+        position: relative;
+        height: 10rem;
+        border-radius: 50%;
+        box-shadow: 0 0 4px 2px #183B4E;;
+    }
+  }
+
+  @media (min-width: 650px) and (max-width: 800px) {
+    .title{
+        color: #183B4E;
+        font-size: 1.7rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #183B4E;;
+        
+    }
+    .title1, .title2, .title3, .title4{
+        display: none;
+    }
+
+    img{
+        border: 2px solid #183B4E;
+        position: relative;
+        height: 10rem;
+        border-radius: 50%;
+        box-shadow: 0 0 4px 2px #183B4E;;
+    }
+
+    .header-content-container{
+        
+        justify-content: center;
+        
+    }
+  }
+
+  @media (max-width: 650px) {
+    .title{
+        color: #183B4E;
+        font-size: 1.7rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #183B4E;;
+        
+    }
+    .title1, .title2, .title3, .title4{
+        display: none;
+    }
+
+    img{
+        border: 2px solid #183B4E;
+        position: relative;
+        height: 10rem;
+        border-radius: 50%;
+        box-shadow: 0 0 4px 2px #183B4E;
+        display: none;
+    }
+
+    .header-content-container{
+        
+        justify-content: center;
+        
+    }
+  }
+
+
+    

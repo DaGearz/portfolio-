@@ -16,7 +16,11 @@ export default function Header() {
                 alt="my logo combining love fro coding and hiking. It also reference my engineering degree"
             />
             <div className={styles["header-content-container"]}>
-                <div className={styles.title}>Todd Williams aka DaGearz</div>
+                <div className={`${styles.title1} ${styles.title}` }>Todd Williams aka DaGearz</div>
+                <div className={`${styles.title2} ${styles.title}` }>Todd Williams</div>
+                <div className={`${styles.title3} ${styles.title}` }>Todd Williams</div>
+                <div className={`${styles.title4} ${styles.title}` }>Todd Williams</div>
+                
                 <div className={styles["nav-bar"]}>
                     <MainNav />
                 </div>

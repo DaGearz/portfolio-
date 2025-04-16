@@ -38,3 +38,9 @@ text-decoration: none;    /* Remove underline on hover, active, visited, and foc
 color: #183B4E;
 background-color: #DDA853;           /* Ensure color remains unchanged */
 }
+
+@media (max-width: 650px) {
+   .li5{
+    display: none;
+   }
+}
