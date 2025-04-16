@@ -39,8 +39,33 @@ color: #183B4E;
 background-color: #DDA853;           /* Ensure color remains unchanged */
 }
 
-@media (max-width: 650px) {
-   .li5{
+
+@media (min-width: 1000px) {
+  .li7, .li5 .li6{
     display: none;
    }
+}
+  
+
+
+@media (max-width: 1060px) {
+  .li2, .li5, .li6{
+   display: none;
+  }
+
+  .li7{
+    display: inline-block;
+  }
+}
+
+select{
+  background-color: "";
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #27548A;
+  
+
+
 }
