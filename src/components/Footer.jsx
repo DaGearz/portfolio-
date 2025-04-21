@@ -4,13 +4,22 @@ import { Mail, Instagram, Github, Linkedin } from "lucide-react";
 export default function Footer() {
     return (
         <div className={styles.footer}>
+            {/*<img src="./assets/footer-image.png" alt="image to merge footer and body smoothly" />*/}
+            <div className= {styles.info}>&copy; 2025 Todd Williams (DaGearz)</div>
             <div className={styles["links-container"]}>
-                <a></a>
-                <a></a>
-                <a></a>
-                <a></a>
+                <a href="mailto:twill003@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <Mail size={24} />
+                </a>
+                <a href="https://www.instagram.com/toddiewoddie/" target="_blank" rel="noopener noreferrer">
+                    <Instagram size={24} /></a>
+                <a href="https://github.com/DaGearz" target="_blank" rel="noopener noreferrer">
+                    <Github size={24} />
+                </a>
+                <a href="www.linkedin.com/in/toddbwilliams" target="_blank" rel="noopener noreferrer">
+                    <Linkedin size={24} />
+                </a>
             </div>
-            <div>&copy; 2025 Todd Williams (DaGearz)</div>
+            
         </div>
     );
 }
