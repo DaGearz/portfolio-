@@ -2,6 +2,7 @@
 import './App.css'
 import Home from './pages/Home'
 import {Routes, Route} from 'react-router-dom'
+import About from './pages/About'
 
 //color scheme https://colorhunt.co/palette/f5eedc27548a183b4edda853
 //#F5EEDC
