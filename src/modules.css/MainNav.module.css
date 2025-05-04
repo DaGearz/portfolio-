@@ -1,27 +1,35 @@
+/* ========== NAV CONTAINER ========== */
 .MainNav {
   background-color: var(--light-bg);
   font-family: sans-serif;
   margin-top: 0;
 }
 
+/* ========== NAV LIST ========== */
 .nav-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   list-style: none;
   gap: 2px;
   padding: 0;
   margin: 0;
 }
 
+/* ========== NAV ITEM ========== */
 .nav-item {
   padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
 }
 
+/* ========== NAV LINKS ========== */
 .nav-link {
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--link-color);
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .nav-link:visited {
@@ -37,89 +45,28 @@
   text-decoration: none;
 }
 
+/* ========== NAV SELECT DROPDOWN ========== */
 .nav-select {
   background-color: transparent;
   border: none;
   font-size: 1rem;
   font-weight: 600;
   color: var(--link-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  vertical-align: middle;
+  height: 100%;
+  display: inline-block;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-
-.header-content-container {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.title {
+.nav-select:focus,
+.nav-select:hover {
+  background-color: var(--accent-color);
   color: var(--primary-color);
-  font-size: 1.7rem;
-  font-weight: bold;
-  text-shadow: var(--text-shadow);
 }
 
-img {
-  border: var(--img-border);
-  position: relative;
-  height: 10rem;
-  border-radius: 50%;
-  box-shadow: var(--img-shadow);
-}
-
-/* Hide dropdown on large screens */
-@media (min-width: var(--breakpoint-large)) {
-  .hideOnLarge {
-    display: none !important;
-  }
-
-  .title2,
-  .title3 {
-    display: none;
-  }
-}
-
-@media (max-width: calc(var(--breakpoint-large) - 1px)) {
-  .title1,
-  .title3,
-  .title4 {
-    display: none;
-  }
-
-  .li7 {
-    display: inline-block;
-  }
-}
-
-/* Tablet: 650px–800px */
-@media (min-width: var(--breakpoint-tablet)) and (max-width: var(--breakpoint-medium)) {
-  .title1,
-  .title2,
-  .title3,
-  .title4 {
-    display: none;
-  }
-
-  .header-content-container {
-    justify-content: center;
-  }
-}
-
-/* Small devices */
-@media (max-width: calc(var(--breakpoint-tablet) - 1px)) {
-  .title1,
-  .title2,
-  .title3,
-  .title4 {
-    display: none;
-  }
-
-  img {
-    display: none;
-  }
-
-  .header-content-container {
-    justify-content: center;
-  }
+/* ========== RESPONSIVE HELPERS ========== */
+.hideOnLarge {
+  display: none !important;
 }
