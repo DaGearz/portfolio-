@@ -37,7 +37,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home navVariables = {navVariables} />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About navVariables = {navVariables} />} />
       </Routes>
     </>
       

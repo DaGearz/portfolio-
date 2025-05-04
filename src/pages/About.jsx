@@ -1,65 +1,75 @@
 import MainLayout from "../templates/MainLayout";
-import LandingOverlay from "../components/LandingOverlay"
-import styles from "../modules.css/About.module.css"
+import LandingOverlay from "../components/LandingOverlay";
+import styles from "../modules.css/About.module.css";
+import AboutInfo from "../components/AboutInfo";
 
-export default function About(){
+// ✅ Imported images
+import BackPacker from "../assets/aboutpictures/BackPacker.JPG";
+import AvidHiker from "../assets/aboutpictures/AvidHiker.JPG";
+import Soldier from "../assets/aboutpictures/soldier.JPG";
+import NativeHabit from "../assets/aboutpictures/NativeHabit.JPG";
+import DailyRunner from "../assets/aboutpictures/DailyRunner.png";
+import FamilyAndFriends from "../assets/aboutpictures/FamilyAndFriends.jpg";
 
-const aboutInfoArray =[
+export default function About({ navVariables }) {
+  const aboutInfoArray = [
     {
-        title: `All Weather Explorer`,
-        img:`../assets/aboutpictures/BackPacker.JPG`,
-        alt: `sitting in chair, in 2 feet of snow`,
-        description:`I’m an avid backpacker who embraces the outdoors in every season—rain, shine, or sub-freezing snow. I find peace and purpose off the grid, where the air is crisp and the challenges are real. Cold mornings, snow-covered trails, and quiet forests are where I feel most alive. This is where I reset, reflect, and push past limits.`,
+      id: 1,
+      title: `All Weather Explorer`,
+      img: BackPacker,
+      alt: `sitting in chair, in 2 feet of snow`,
+      description: `I’m an avid backpacker who embraces the outdoors in every season—rain, shine, or sub-freezing snow. I find peace and purpose off the grid, where the air is crisp and the challenges are real. Cold mornings, snow-covered trails, and quiet forests are where I feel most alive. This is where I reset, reflect, and push past limits.`,
+      isUse: true
     },
     {
-        title:`Peak Seeker`,
-        img:`../assets/aboutpictures/AvidHiker.JPG`,
-        alt: `Top of Cuyamaca Peak with the elvation sign in hand`,
-        description: `Hiking is more than a hobby—it's how I challenge myself to keep moving forward, both physically and mentally. Each summit I reach, like Cuyamaca Peak, reminds me that growth lives just beyond comfort. My goal? Conquer as many peaks as I can and keep leveling up with every climb.`
+      id: 2,
+      title: `Peak Seeker`,
+      img: AvidHiker,
+      alt: `Top of Cuyamaca Peak with the elevation sign in hand`,
+      description: `Hiking is more than a hobby—it's how I challenge myself to keep moving forward, both physically and mentally. Each summit I reach, like Cuyamaca Peak, reminds me that growth lives just beyond comfort. My goal? Conquer as many peaks as I can and keep leveling up with every climb.`,
+      isUse: true
     },
     {
-        title: `Proud Soldier`,
-        img: `../assets/aboutpictures/soldier.JPG`,
-        alt: `holding a paintball gone in military attire`,
-        description: `Before I became a developer, I served my country with pride. I spent six years in the Army National Guard and one year in the Army Reserves as a Combat Engineer. My time in uniform taught me the value of discipline, leadership, and teamwork—qualities I carry with me into every project I build. Serving in the military gave me the mindset to overcome challenges, stay mission-focused, and always back up my team. That experience shaped who I am today and fuels my drive in the tech world.` ,
-
+      id: 3,
+      title: `Proud Soldier`,
+      img: Soldier,
+      alt: `holding a paintball gun in military attire`,
+      description: `Before I became a developer, I served my country with pride. I spent six years in the Army National Guard and one year in the Army Reserves as a Combat Engineer. My time in uniform taught me the value of discipline, leadership, and teamwork—qualities I carry with me into every project I build. Serving in the military gave me the mindset to overcome challenges, stay mission-focused, and always back up my team. That experience shaped who I am today and fuels my drive in the tech world.`,
+      isUse: true
     },
     {
-        title: `Natural Habitat`,
-        img: `../assets/aboutpictures/NativeHabit.JPG`,
-        alt: `Picture in front of gym mirror`,
-        description:`When I’m not out on the trail or leveling up my software dev skills, you’ll find me in the gym—my second home. For me, fitness isn’t just about building strength, it’s about sharpening discipline and mental clarity. A strong body supports a stronger mind, and I treat both like tools I’m always upgrading.` ,
-
+      id: 4,
+      title: `Natural Habitat`,
+      img: NativeHabit,
+      alt: `Picture in front of gym mirror`,
+      description: `When I’m not out on the trail or leveling up my software dev skills, you’ll find me in the gym—my second home. For me, fitness isn’t just about building strength, it’s about sharpening discipline and mental clarity. A strong body supports a stronger mind, and I treat both like tools I’m always upgrading.`,
+      isUse: true
     },
     {
-        title: `Relentless Runner`,
-        img: `../assets/aboutpictures/DailyRunner.png`,
-        alt: `Screen shot of garmin app. This showcase 30 miles in a week`,
-        description: `I believe in consistency over everything. Once I lock into a goal, I go all in—no excuses. Running is part of my rhythm, and logging miles throughout the week keeps me grounded, focused, and disciplined. Whether it's 4 or 5 miles, I lace up and get after it. Momentum is everything.`,
+      id: 5,
+      title: `Relentless Runner`,
+      img: DailyRunner,
+      alt: `Screenshot of Garmin app showing 30 miles in a week`,
+      description: `I believe in consistency over everything. Once I lock into a goal, I go all in—no excuses. Running is part of my rhythm, and logging miles throughout the week keeps me grounded, focused, and disciplined. Whether it's 4 or 5 miles, I lace up and get after it. Momentum is everything.`,
+      isUse: true
     },
     {
-        title: `Chosen and Givin'`,
-        img: `../assets/aboutpictures/FamilyAndFriends.jpg`,
-        alt:`selfy with my girlfriend`,
-        description: `The best part of life is the people you share it with. I’m grateful to be surrounded by love—some relationships I was born into, others I chose along the way. Friends, family, and all the moments in between remind me what really matters. These connections keep me grounded, inspired, and always smiling.`,
-    },
-]
+      id: 6,
+      title: `Chosen and Givin'`,
+      img: FamilyAndFriends,
+      alt: `selfie with my girlfriend`,
+      description: `The best part of life is the people you share it with. I’m grateful to be surrounded by love—some relationships I was born into, others I chose along the way. Friends, family, and all the moments in between remind me what really matters. These connections keep me grounded, inspired, and always smiling.`,
+      isUse: true
+    }
+  ];
 
-
-
-
-    return(
-        <MainLayout>
-
-            <div className={styles["body"]}>
-                <div className="intro"></div>
-                <div className={styles["more-info"]}>
-                    <aboutInfo  data ={aboutInfoArray[0]} />
-                </div>
-
-            </ div>
-
-
-        </MainLayout>
-    )
+  return (
+    <MainLayout navVariables={navVariables}>
+      {aboutInfoArray.map((aboutInfo) =>
+        aboutInfo.isUse ? (
+          <AboutInfo key={aboutInfo.id} aboutInfo={aboutInfo} />
+        ) : null
+      )}
+    </MainLayout>
+  );
 }
