@@ -1,11 +1,29 @@
 
 
+/*This will handle the overall layout of the application*/
+
+/*overall layout*/
 .container, .home-container{
     width: 100%;
     margin: 0;
     padding: 0;
     
 }
+
+
+/*Header Layout*/
+.Header{
+    height: 4rem;
+    width: 100%;
+    background-color: #F5EEDC;
+    box-shadow: 0 2px 3px #183B4E;
+    display: flex;
+}
+
+
+/* Body Layout*/
+/* Footer Layout*/
+
 
 .home-container{
     min-height: 100vh;

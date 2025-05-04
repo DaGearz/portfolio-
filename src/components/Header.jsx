@@ -3,6 +3,7 @@
 
 import MainNav from "./MainNav"
 import styles from "../modules.css/Header.module.css"
+import stylesMainLayout from "../modules.css/MainLayout.module.css"
 import mainlogo from "../assets/website_logo.png"
 
 export default function Header() {
@@ -10,7 +11,7 @@ export default function Header() {
     
     return (
      
-        <div className={styles["header-container"]}>
+        <div className={stylesMainLayout.Header}>
             <img 
                 src={mainlogo}
                 alt="my logo combining love fro coding and hiking. It also reference my engineering degree"
