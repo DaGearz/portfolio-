@@ -1,58 +1,57 @@
+/* ========== NAV CONTAINER ========== */
+.MainNav {
+  font-family: sans-serif;
+  background-color: #F5EEDC;
+  margin-top: 30px;
+}
 
+/* ========== NAV LIST ========== */
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 4px;
+}
 
-.nav{
-    font-family: sans-serif;
-    background-color: #F5EEDC;
-    margin-top: 30px;
-  }
-  
-  .nav-list{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    gap: 2px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-list a{
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: #27548A;
-    padding: 0.5rem 1rem;
-  
-  
-  }
-  
-  
-  
-  nav a:visited{
-  text-decoration: none;    /* Remove underline on hover, active, visited, and focus */
-  color: 183B4E;           /* Ensure color remains unchanged */
-  }
-  
-  
-  nav a:hover,
-  nav a:active,
-  nav a:focus {
-  text-decoration: none;    /* Remove underline on hover, active, visited, and focus */
+/* ========== NAV LINKS ========== */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #27548A;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:visited {
+  text-decoration: none;
   color: #183B4E;
-  background-color: #DDA853;           /* Ensure color remains unchanged */
-  }
-  
+}
 
-  
-  select{
-    background-color: "";
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: #27548A;
-    
-  }
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+  color: #183B4E;
+  background-color: #DDA853;
+}
 
-  select{
-    display: none;
-  }
+/* ========== NAV SELECT DROPDOWN ========== */
+.nav-select {
+  background-color: #F5EEDC;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #27548A;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-select:focus,
+.nav-select:hover {
+  color: #183B4E;
+  background-color: #DDA853;
+}

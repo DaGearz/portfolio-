@@ -13,21 +13,21 @@ import About from './pages/About'
 function App() {
 
   const navVariables = [
-    { id: 1, name: "Home", path: "/", isSelect: false },
-    { id: 2, name: "About", path: "/about", isSelect: false },
-    { id: 3, name: "Portfolio", path: "/portfolio", isSelect: false },
-    { id: 4, name: "Contact", path: "/contact-info", isSelect: false },
-    { id: 5, name: "Resume", path: "/resume", isSelect: false },
-    { id: 6, name: "Features", path: "/features", isSelect: false },
+    { id: "L1", name: "Home", path: "/", isSelect: false },
+    { id: "L2", name: "About", path: "/about", isSelect: false },
+    { id: "L3", name: "Portfolio", path: "/portfolio", isSelect: false },
+    { id: "L4", name: "Contact", path: "/contact-info", isSelect: false },
+    { id: "L5", name: "Resume", path: "/resume", isSelect: false },
+    { id: "L6", name: "Features", path: "/features", isSelect: false },
     {
-      id: 7,
+      id: "L7",
       name: "Additional",
       path: null,
       isSelect: true,
       options: [
-        { name: "Resume", path: "/resume" },
-        { name: "Features", path: "/features" },
-        { name: "Contact", path: "/contact-info" }
+        { id: "O1", name: "Contact", path: "/contact-info" },
+        { id: "O2", name: "Resume", path: "/resume" },
+        { id: "O3", name: "Features", path: "/features" }
       ]
     }
   ];
