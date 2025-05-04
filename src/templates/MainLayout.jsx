@@ -8,18 +8,15 @@ import stylesFooter from "../modules.css/Footer.module.css"
 
 export default function MainLayout({ children }) {
   return (
-    <div className={styles["home-container"]}>
-      <div className={`${styles["header-container"]} ${styles.container}`}>
+    <div className={styles.Home}>
         <Header />
-      </div>
-
+      
       <div className={`${styles["body-container"]} ${styles.container}`}>
         {children}
       </div>
 
-      <div className={`${styles["footer-container"]} ${styles.container}`}>
         <Footer />
-      </div>
+      
     </div>
   )
 }

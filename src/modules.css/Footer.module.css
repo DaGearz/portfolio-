@@ -1,14 +1,4 @@
 
-.footer {
-  margin-top: auto;
-  color: #27548A;
-  background-color: #DDA853;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
 
 .info{
   width: 25rem; 

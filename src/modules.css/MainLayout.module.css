@@ -3,7 +3,7 @@
 /*This will handle the overall layout of the application*/
 
 /*overall layout*/
-.container, .home-container{
+.container, .Home{
     width: 100%;
     margin: 0;
     padding: 0;
@@ -25,7 +25,18 @@
 /* Footer Layout*/
 
 
-.home-container{
+.Footer {
+    margin-top: auto;
+    color: #27548A;
+    background-color: #DDA853;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+.Home{
     min-height: 100vh;
     display: Flex;
     flex-direction: column;
@@ -41,9 +52,4 @@
     flex-grow: 1;
 }
 
-.footer-container{
-    margin-top: auto;
-    color: #27548A;
-    background-color: #DDA853;
-}
 

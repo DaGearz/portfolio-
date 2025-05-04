@@ -11,7 +11,7 @@ export default function Header() {
     
     return (
      
-        <div className={stylesMainLayout.Header}>
+        <div className={`${stylesMainLayout.Header} ${stylesMainLayout.container}`}>
             <img 
                 src={mainlogo}
                 alt="my logo combining love fro coding and hiking. It also reference my engineering degree"

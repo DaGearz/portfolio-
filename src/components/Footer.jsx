@@ -1,9 +1,10 @@
 import styles from "../modules.css/Footer.module.css";
+import stylesMainLayout from "../modules.css/MainLayout.module.css";
 import { Mail, Instagram, Github, Linkedin } from "lucide-react";
 
 export default function Footer() {
     return (
-        <div className={styles.footer}>
+        <div className={`${stylesMainLayout.Footer} ${stylesMainLayout.container}`}>
             {/*<img src="./assets/footer-image.png" alt="image to merge footer and body smoothly" />*/}
             <div className= {styles.info}>&copy; 2025 Todd Williams (DaGearz)</div>
             <div className={styles["links-container"]}>
