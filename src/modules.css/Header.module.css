@@ -1,6 +1,9 @@
 
 
 
+/* contains header flex layout not including img.
+The image is taken out flow of document*/
+
 .header-content-container{
     flex-grow: 1;
     display: flex;
@@ -9,7 +12,11 @@
     
 }
 
+/* logic for large screens */
+
 @media (min-width: 1060px) {
+    
+    /* Display lonf form title*/
     .title{
         color: #183B4E;
         font-size: 1.7rem;
@@ -17,10 +24,11 @@
         text-shadow: 1px 1px 1px #183B4E;;
     }
 
-    .title2, .title3, .title4{
+    .title2, .title3{
         display: none;
     }
 
+    /* Romve image from flow of document*/
     img{
         border: 2px solid #183B4E;
         position: relative;
@@ -28,6 +36,10 @@
         border-radius: 50%;
         box-shadow: 0 0 4px 2px #183B4E;;
     }
+    /* Remove select element */
+    .hideOnLarge {
+        display: none !important;
+      }
   }
 
 
