@@ -11,6 +11,18 @@ import About from './pages/About'
 //#DDA853 
 
 function App() {
+
+  const navVariables =[
+    {name: "Home", path: "/"},
+    {name: "About", path: "/about"},
+    {name: "Portfolio", path: "/portfolio"},
+    {name: "Contact", path: "/contact-info"},
+    {name: "Resume", path: "/resume"},
+    {name: "Features", path: "/features"},
+    {name: "Additional", path: null},
+    
+    
+  ]
   
   return (
     <>
