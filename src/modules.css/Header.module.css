@@ -1,130 +1,47 @@
-
-
-
-/* contains header flex layout not including img.
-The image is taken out flow of document*/
-
-.header-content-container{
+.header-content-container {
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-}
-
-/* logic for large screens */
-
-@media (min-width: 1060px) {
-    
-    /* Display lonf form title*/
-    .title{
-        color: #183B4E;
-        font-size: 1.7rem;
-        font-weight: bold;
-        text-shadow: 1px 1px 1px #183B4E;;
-    }
-
-    .title2, .title3{
-        display: none;
-    }
-
-    /* Romve image from flow of document*/
-    img{
-        border: 2px solid #183B4E;
-        position: relative;
-        height: 10rem;
-        border-radius: 50%;
-        box-shadow: 0 0 4px 2px #183B4E;;
-    }
-    /* Remove select element */
+  }
+  
+  .title {
+    color: #183B4E;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #183B4E;
+  }
+  
+  img {
+    border: 2px solid #183B4E;
+    position: relative;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px #183B4E;
+  }
+  
+  /* Hide dropdown on large screens */
+  @media (min-width: 1060px) {
     .hideOnLarge {
-        display: none !important;
-      }
-  }
-
-
-
-  @media  (max-width: 1060px) {
-    .title{
-        color: #183B4E;
-        font-size: 1.7rem;
-        font-weight: bold;
-        text-shadow: 1px 1px 1px #183B4E;;
-        
-    }
-    .title1, .title3, .title4{
-        display: none;
-    }
-
-    
-    .li7{
-        display: inline-block;
-    }
-
-
-    img{
-        border: 2px solid #183B4E;
-        position: relative;
-        height: 10rem;
-        border-radius: 50%;
-        box-shadow: 0 0 4px 2px #183B4E;;
+      display: none !important;
     }
   }
-
+  
+  /* Tablet: center content */
   @media (min-width: 650px) and (max-width: 800px) {
-    .title{
-        color: #183B4E;
-        font-size: 1.7rem;
-        font-weight: bold;
-        text-shadow: 1px 1px 1px #183B4E;;
-        
-    }
-    .title1, .title2, .title3, .title4{
-        display: none;
-    }
-
-    img{
-        border: 2px solid #183B4E;
-        position: relative;
-        height: 10rem;
-        border-radius: 50%;
-        box-shadow: 0 0 4px 2px #183B4E;;
-    }
-
-    .header-content-container{
-        
-        justify-content: center;
-        
+    .header-content-container {
+      justify-content: center;
     }
   }
-
-  @media (max-width: 650px) {
-    .title{
-        color: #183B4E;
-        font-size: 1.7rem;
-        font-weight: bold;
-        text-shadow: 1px 1px 1px #183B4E;;
-        
+  
+  /* Small screens: hide image and center */
+  @media (max-width: 805px) {
+    img {
+      display: none;
     }
-    .title1, .title2, .title3, .title4{
-        display: none;
-    }
-
-    img{
-        border: 2px solid #183B4E;
-        position: relative;
-        height: 10rem;
-        border-radius: 50%;
-        box-shadow: 0 0 4px 2px #183B4E;
-        display: none;
-    }
-
-    .header-content-container{
-        
-        justify-content: center;
-        
+  
+    .header-content-container {
+      justify-content: center;
     }
   }
-
-
-    
+  

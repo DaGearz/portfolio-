@@ -1,36 +1,25 @@
 import { useState, useEffect } from "react";
 import styles from "../modules.css/MainNav.module.css";
-import stylesHeader from "../modules.css/Header.module.css";
-
-// 👇 ADD THIS
-function useWindowWidth() {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return width;
-}
+import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function MainNav({ navVariables }) {
   const width = useWindowWidth();
   const isSmallScreen = width < 1060;
+  const isPhone = width <= 650;
 
+  // Filter top-level nav items
   const filteredNav = navVariables.filter((item) => {
+    if (isPhone && item.id === "L4") return false; // hide Contact
     if (isSmallScreen && (item.id === "L5" || item.id === "L6")) return false;
-    return !(width >= 1060 && item.isHideOnLarge);
+    if (!isSmallScreen && item.isHideOnLarge) return false;
+    return true;
   });
 
   return (
     <nav className={styles.MainNav}>
       <ul className={styles["nav-list"]}>
         {filteredNav.map((navItem) => {
-          const itemClass = `${styles["nav-item"]} ${
-            navItem.isHideOnLarge ? stylesHeader.hideOnLarge : ""
-          }`;
+          const itemClass = styles["nav-item"];
 
           if (!navItem.isSelect) {
             return (
@@ -42,9 +31,12 @@ export default function MainNav({ navVariables }) {
             );
           }
 
-          const filteredOptions = navItem.options?.filter((opt) =>
-            isSmallScreen ? opt.id !== "O1" : true
-          );
+          // Filter dropdown options dynamically
+          const filteredOptions = navItem.options?.filter((opt) => {
+            if (isSmallScreen && opt.id === "O1") return false;
+            if (isPhone && opt.id === "O1") return true; // show Contact in dropdown on phones
+            return opt.id !== "O1"; // hide elsewhere
+          });
 
           return (
             <li key={navItem.id} className={itemClass}>
