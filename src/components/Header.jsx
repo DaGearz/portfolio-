@@ -6,7 +6,7 @@ import styles from "../modules.css/Header.module.css"
 import stylesMainLayout from "../modules.css/MainLayout.module.css"
 import mainlogo from "../assets/website_logo.png"
 
-export default function Header() {
+export default function Header({ navVariables }) {
 
     
     return (
@@ -23,7 +23,7 @@ export default function Header() {
                 <div className={`${styles.title4} ${styles.title}` }>Todd Williams</div>
                 
                 <div className={styles["nav-bar"]}>
-                    <MainNav />
+                    <MainNav navVariables={navVariables}/>
                 </div>
             </div>
         </div>

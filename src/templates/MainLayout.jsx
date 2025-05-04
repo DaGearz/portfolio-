@@ -6,10 +6,10 @@ import stylesHeader from "../modules.css/Header.module.css"
 import stylesFooter from "../modules.css/Footer.module.css"
 
 
-export default function MainLayout({ children }) {
+export default function MainLayout({ children, navVariables}) {
   return (
     <div className={styles.Home}>
-        <Header />
+        <Header navVariables = {navVariables}/>
       
       <div className={`${styles["body-container"]} ${styles.container}`}>
         {children}

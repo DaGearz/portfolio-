@@ -12,22 +12,30 @@ import About from './pages/About'
 
 function App() {
 
-  const navVariables =[
-    {name: "Home", path: "/"},
-    {name: "About", path: "/about"},
-    {name: "Portfolio", path: "/portfolio"},
-    {name: "Contact", path: "/contact-info"},
-    {name: "Resume", path: "/resume"},
-    {name: "Features", path: "/features"},
-    {name: "Additional", path: null},
-    
-    
-  ]
+  const navVariables = [
+    { id: 1, name: "Home", path: "/", isSelect: false },
+    { id: 2, name: "About", path: "/about", isSelect: false },
+    { id: 3, name: "Portfolio", path: "/portfolio", isSelect: false },
+    { id: 4, name: "Contact", path: "/contact-info", isSelect: false },
+    { id: 5, name: "Resume", path: "/resume", isSelect: false },
+    { id: 6, name: "Features", path: "/features", isSelect: false },
+    {
+      id: 7,
+      name: "Additional",
+      path: null,
+      isSelect: true,
+      options: [
+        { name: "Resume", path: "/resume" },
+        { name: "Features", path: "/features" },
+        { name: "Contact", path: "/contact-info" }
+      ]
+    }
+  ];
   
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home navVariables = {navVariables} />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </>
