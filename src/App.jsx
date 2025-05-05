@@ -5,12 +5,9 @@ import {Routes, Route} from 'react-router-dom'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Resume from './pages/Resume'
+import Portfolio from './pages/Portfolio'
 
-//color scheme https://colorhunt.co/palette/f5eedc27548a183b4edda853
-//#F5EEDC
-//#27548A
-//#183B4E
-//#DDA853 
+
 
 function App() {
 
@@ -39,7 +36,8 @@ function App() {
         <Route path="/" element={<Home navVariables = {navVariables} />} />
         <Route path="/about" element={<About navVariables = {navVariables} />} />
         <Route path="/contact-info" element={<Contact navVariables = {navVariables} />} />
-        <Route path="/Resume" element={<Resume navVariables = {navVariables} />} />
+        <Route path="/resume" element={<Resume navVariables = {navVariables} />} />
+        <Route path="/portfolio" element={<Portfolio navVariables = {navVariables} />} />
       </Routes>
     </>
       
