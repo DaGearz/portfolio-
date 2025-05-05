@@ -3,8 +3,9 @@ import styles from "../modules.css/Header.module.css";
 import stylesMainLayout from "../modules.css/MainLayout.module.css";
 import mainlogo from "../assets/website_logo.png";
 import useWindowWidth from "../hooks/useWindowWidth";
+import navVariables from "../data/headerData";
 
-export default function Header({ navVariables }) {
+export default function Header() {
   const width = useWindowWidth();
 
   return (

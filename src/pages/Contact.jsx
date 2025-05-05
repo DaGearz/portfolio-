@@ -3,9 +3,9 @@ import styles from "../modules.css/Contact.module.css";
 import { Mail, MapPin, Phone, Linkedin, Github, Globe } from "lucide-react";
 
 
-const Contact = ({navVariables}) => {
+const Contact = () => {
   return (
-    <MainLayout navVariables={navVariables}>
+    <MainLayout >
         <div className={styles.contactContainer}>
         <h2>📬 Contact Me</h2>
         <p className={styles.description}>
@@ -16,6 +16,9 @@ const Contact = ({navVariables}) => {
         <ul className={styles.contactList}>
             <li>
             <Mail size={20} /> <a href="mailto:todd.williams.dev@gmail.com">todd.williams.dev@gmail.com</a>
+            </li>
+            <li>
+            <Phone size={20} /> ‪(619) 365-5267‬
             </li>
             <li>
             <MapPin size={20} /> San Diego, CA

@@ -2,9 +2,9 @@ import React from 'react';
 import styles from '../modules.css/Resume.module.css';
 import MainLayout from "../templates/MainLayout";
 
-const Resume = ({ navVariables }) => {
+const Resume = () => {
   return (
-    <MainLayout navVariables={navVariables}>
+    <MainLayout>
       <div className={styles.mainContainer}>
 
         <div className={styles.containers}>
