@@ -1,0 +1,50 @@
+.contactContainer {
+    max-width: 700px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: #f5eedc;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    color: #183b4e;
+    text-align: center;
+  }
+  
+  .contactContainer h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .description {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.2rem;
+    justify-content: start;
+  }
+  
+  .contactList li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .contactList a {
+    color: #27548a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .contactList a:hover {
+    color: #183b4e;
+  }
+  

@@ -1,0 +1,100 @@
+/* Resume.module.css */
+
+.mainContainer {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0;
+  }
+  
+  .containers {
+    margin: 2rem 0;
+    background-color: #f5eedc; /* Consistent with other pages */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    border-bottom: 2px solid #cbd5e1;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    color: #334155;
+    margin: 0.5rem 0;
+  }
+  
+  .bold {
+    font-weight: 700;
+    color: #0f172a;
+  }
+  
+  .description,
+  p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  
+  li {
+    margin-bottom: 0.6rem;
+  }
+  
+  @media (max-width: 768px) {
+    .mainContainer {
+      padding: 1.5rem;
+    }
+  
+    .containers {
+      padding: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.1rem;
+    }
+  
+    p,
+    ul {
+      font-size: 0.95rem;
+    }
+  }
+  .linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .linkList li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .linkList a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .linkList a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+  

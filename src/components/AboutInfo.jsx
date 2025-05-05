@@ -17,6 +17,9 @@ export default function AboutInfo({ aboutInfo }) {
       {isModalOpen && (
         <div className={styles.modalOverlay} onClick={() => setIsModalOpen(false)}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.closeButton} onClick={() => setIsModalOpen(false)}>
+              &times;
+            </div>
             <div className={styles.modalImageWrapper}>
               <img src={img} alt={alt} className={styles.modalImage} />
             </div>
