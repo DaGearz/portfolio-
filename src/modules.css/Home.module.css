@@ -4,4 +4,54 @@
     width: 80%;
     padding: 20px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.Home > div {
+    margin-top: 10px;
+}
+.homeContainer{
+    background-color: #DDA853;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.homeContainer div, .homeContainer p{
+   
+    color: #183B4E ;
+}
+
+.ranButton{
+   
+    padding: 2px;
+    background-color: #F5EEDC ;
+    border-radius: 5px;
+
+}
+
+.ranButton:hover{
+   
+    scale: 1.2%;
+    background-color: lightgreen ;
+    border-radius: 5px;
+
+}
+
+.featured div {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.featured div span:hover{
+    border: 2px double #183B4E;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: yellow;
+
 }
