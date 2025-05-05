@@ -1,28 +1,18 @@
-.AboutInfo {
-    width: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 40px;
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keeps square shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
 
-  }
-
-
-  .imageContainer {
-    width: 300px;
-    height: 300px;
-    background-color: aliceblue;
-    
-  }
-  
-  
-  .image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-  
- 
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Crops edges but fills space */
+  object-position: center top; 
+  border-radius: 10px; /* Keep flat corners unless needed */
+  text-shadow: var(--text-shadow);
+}
