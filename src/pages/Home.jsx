@@ -3,6 +3,7 @@ import MainLayout from "../templates/MainLayout";
 import LandingOverlay from "../components/LandingOverlay";
 import styles from "../modules.css/Home.module.css";
 import { greetings, buttonQuotes } from "../data/greetingsData";
+import chooseAppData from "../data/chooseAppData,js";
 
 export default function Home() {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -40,6 +41,22 @@ export default function Home() {
             <LandingOverlay handleClose={() => setShowOverlay(false)} />
           </div>
         )}
+        <div className={`${styles.homeContainer} ${styles.apps}`}>
+          <div className={styles.appSelector}>
+            <label htmlFor="apps">Please select a mini component to enjoy:</label>
+            <select id = "apps">
+                <option key="0" value="default">Choose Option</option>
+                  {chooseAppData.map((app) => {
+                    <option key={app.id} value={app.title}>{app.title}</option>
+                  })}
+                  
+            </select>
+          </div>
+          <div className={styles.visibleApp}>
+            
+
+          </div>
+        </div>
       </main>
     </MainLayout>
   );

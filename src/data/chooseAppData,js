@@ -1,0 +1,11 @@
+
+
+const chooseAppData = [
+    {   
+        id:1,
+        title: TicTacToe,
+        code: <TicTacToe />
+    },
+]
+
+export default chooseAppData
