@@ -1,6 +1,6 @@
 .imageContainer {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Keeps square shape */
+  aspect-ratio: 1 / 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +11,81 @@
 .image {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Crops edges but fills space */
-  object-position: center top; 
-  border-radius: 10px; /* Keep flat corners unless needed */
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
   text-shadow: var(--text-shadow);
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Modal Box */
+.modalContent {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Image Side */
+.modalImageWrapper {
+  flex: 1;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modalImage {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Text Side */
+.modalText {
+  flex: 1;
+  background-color: #f5eedc;
+  color: #183b4e;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.modalText h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.modalText p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
 }
