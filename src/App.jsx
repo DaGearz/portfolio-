@@ -18,7 +18,6 @@ function App() {
     { id: "L3", name: "Portfolio", path: "/portfolio", isSelect: false, isHideOnLarge: false  },
     { id: "L4", name: "Contact", path: "/contact-info", isSelect: false, isHideOnLarge: false  },
     { id: "L5", name: "Resume", path: "/resume", isSelect: false, isHideOnLarge: false  },
-    { id: "L6", name: "Features", path: "/features", isSelect: false, isHideOnLarge: false  },
     {
       id: "L7",
       name: "Additional",
@@ -28,7 +27,6 @@ function App() {
       options: [
         { id: "O1", name: "Contact", path: "/contact-info" },
         { id: "O2", name: "Resume", path: "/resume" },
-        { id: "O3", name: "Features", path: "/features" }
       ]
     }
   ];

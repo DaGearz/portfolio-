@@ -1,29 +1,28 @@
 .AboutInfo {
-    margin: 2rem auto;
-    padding: 1rem;
-    max-width: 800px;
-    background-color: #f5eedc;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+
+  }
+
+
+  .imageContainer {
+    width: 300px;
+    height: 300px;
+    background-color: aliceblue;
+    
   }
   
-  .title {
-    color: #27548a;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
   
   .image {
-    width: 100%;
-    max-height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
   }
   
-  .description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #183b4e;
-  }
-  
+ 
