@@ -1,21 +1,23 @@
-import MainLayout from "../templates/MainLayout"
-import LandingOverlay from "../components/LandingOverlay"
-import styles from "../modules.css/Home.module.css"
+import { useState } from "react";
+import MainLayout from "../templates/MainLayout";
+import LandingOverlay from "../components/LandingOverlay";
+import styles from "../modules.css/Home.module.css";
 
 export default function Home() {
+  const [showOverlay, setShowOverlay] = useState(true); // default: visible
+
   return (
-    <MainLayout >
-      <p>is this even working</p>
-      <p>is this even working</p>
-      <p>is this even working</p>
-      <p>is this even working</p>
-      <p>is this even working</p>
-      <p>is this even working</p>
+    <MainLayout>
+      <main className={styles.Home}>
+      
+
+      {showOverlay && (
         <div className={styles["landing-overlay"]}>
-            <LandingOverlay />
+          <LandingOverlay handleClose={() => setShowOverlay(false)} />
         </div>
+      )}
+      </main>
+      
     </MainLayout>
-  )
+  );
 }
-
-

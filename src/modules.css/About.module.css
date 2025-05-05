@@ -1,6 +1,21 @@
+
+.About {
+  margin: 50px 200px;
+  min-height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
 .introContainer {
   margin: 50px 200px;
+  background-color: #DDA853;
+  border-radius: 10px;
+  padding: 20px;
 }
+.introContainer p{
+  color: #183B4E;
+}
+  
 
 /* FLEX WRAPPER for 3-per-row layout */
 .aboutFlex {

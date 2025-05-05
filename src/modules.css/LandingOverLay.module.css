@@ -19,3 +19,47 @@
 img{
     box-shadow: 0 0 2px 2px #DDA853;
 }
+
+.overlay-main-nav{
+    margin-top: 20px;
+    background-color: #f5eedc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 2px 2px var(--accent-color);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.overlay-main-nav h1{
+    margin: 0 auto;
+}
+
+.featuredProjects{
+    height: 300px;
+    width: 700px;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.exit{
+    position: fixed;
+    top:10px;
+    right: 200px;
+    font-size: 4rem;
+    color: black;
+    background-color: var(--accent-color);
+    padding: 0px 20px;
+    border-radius: 20px;
+    
+
+}
+
+.exit:hover{
+    
+    color: var(--accent-color);
+    background-color: black;
+    
+    
+
+}

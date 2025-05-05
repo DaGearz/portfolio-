@@ -1,57 +1,27 @@
-/* ========== NAV CONTAINER ========== */
-.MainNav {
-  font-family: sans-serif;
-  background-color: #F5EEDC;
-  margin-top: 30px;
+.nav li {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--link-color);
+  
+  font-size: 2rem;
+  padding: 1px 10px;
+  text-decoration: none;
 }
 
-/* ========== NAV LIST ========== */
-.nav-list {
+.nav li a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+ul{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 4px;
+  justify-content: center;
+  gap: 10px;
 }
 
-/* ========== NAV LINKS ========== */
-.nav-link {
-  font-size: 1rem;
-  font-weight: 600;
+
+.nav li a:hover {
+  color: rgb(83, 24, 9);
   text-decoration: none;
-  color: #27548A;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.nav-link:visited {
-  text-decoration: none;
-  color: #183B4E;
-}
-
-.nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
-  color: #183B4E;
-  background-color: #DDA853;
-}
-
-/* ========== NAV SELECT DROPDOWN ========== */
-.nav-select {
-  background-color: #F5EEDC;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #27548A;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.nav-select:focus,
-.nav-select:hover {
-  color: #183B4E;
-  background-color: #DDA853;
 }
