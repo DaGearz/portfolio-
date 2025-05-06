@@ -57,6 +57,8 @@ export default function Home() {
           <div className={styles.visibleApp}>
             
              {chooseAppData.find(app => app.title === selectedApp)?.code || <Default />}
+
+             
              
           </div>
         </div>
