@@ -12,6 +12,15 @@ export default function Home() {
   const [greeting, setGreeting] = useState(`Hi, my name is Todd — but online, I go by my OG gamertag: DaGearz. I’m kicking off my career as a software developer, and this site is just the beginning. Check out what I can do, and if you like what you see, don’t be shy — reach out! I’m ready to work, build, and grow with the right team.`);
   const [quotes, setQuotes] = useState("This intro kinda sucks, not gonna lie. Smash that button and roll the dice on a better one.");
   const [selectedApp, setSelectedApp] = useState(null);
+  const [name, setName] = useState(() => {
+    return localStorage.getItem("name") || "User";
+  });
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+  setName(value);
+  localStorage.setItem("name", value);
+  }
   const randomGreeting = () => {
     const indexG = Math.floor(Math.random() * greetings.length);
     const indexQ = Math.floor(Math.random() * buttonQuotes.length);
@@ -22,6 +31,8 @@ export default function Home() {
   return (
     <MainLayout>
       <main className={styles.Home}>
+
+        
         <div className={`${styles.homeContainer}`}>
           <div className={styles.greeting}>{greeting}</div>
           <p>{quotes}</p>
@@ -31,17 +42,18 @@ export default function Home() {
         </div>
 
         <div className={`${styles.homeContainer} ${styles.featured}`}>
-          <p>Click to check out my Featured Projects</p>
+          <p>Hey, Insert your name and click below.</p>
+          <input 
+            type="text" 
+            value={name} 
+            placeholder="Insert Name" 
+            onChange={handleChange}/>
           <div>
-            <span onClick={() => setShowOverlay(true)}>Featured Projects</span>
+            <span onClick={() => setShowOverlay(true)}>CLICK ME</span>
           </div>
         </div>
 
-        {showOverlay && (
-          <div className={styles["landing-overlay"]}>
-            <LandingOverlay handleClose={() => setShowOverlay(false)} />
-          </div>
-        )}
+        
         <div className={`${styles.homeContainer} ${styles.apps}`}>
           <div className={styles.appSelector}>
             <label htmlFor="apps">Please select a mini component to enjoy:</label>
@@ -55,13 +67,18 @@ export default function Home() {
             </select>
           </div>
           <div className={styles.visibleApp}>
-            
              {chooseAppData.find(app => app.title === selectedApp)?.code || <Default />}
-
-             
-             
           </div>
         </div>
+
+
+        {showOverlay && (
+            <div className={styles["landing-overlay"]}>
+              <LandingOverlay handleClose={() => setShowOverlay(false)} name = {name}/>
+            </div>
+          )}
+
+
       </main>
     </MainLayout>
   );
