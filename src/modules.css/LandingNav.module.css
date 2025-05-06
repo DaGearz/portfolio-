@@ -1,0 +1,27 @@
+.nav li {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--link-color);
+  
+  font-size: 2rem;
+  padding: 1px 10px;
+  text-decoration: none;
+}
+
+.nav li a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.nav ul{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.nav li a:hover {
+  color: rgb(83, 24, 9);
+  text-decoration: none;
+}

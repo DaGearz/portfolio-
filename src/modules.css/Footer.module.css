@@ -1,0 +1,38 @@
+
+
+.info{
+  width: 25rem; 
+}
+
+.links-container{
+  flex-grow: 1;
+  display: flex;
+  
+}
+
+.footer-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.4; /* optional */
+}
+
+.info, .links-container {
+  position: relative;
+  z-index: 2;
+}
+
+.info{
+  margin-left: 40px;
+}
+
+.links-container{
+  display: flex;
+  justify-content: center;
+  gap: 50px;;
+
+}

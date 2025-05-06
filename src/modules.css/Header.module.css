@@ -1,0 +1,47 @@
+.header-content-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .title {
+    color: #183B4E;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #183B4E;
+  }
+  
+  .Header img {
+    border: 2px solid #183B4E;
+    position: relative;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px #183B4E;
+  }
+  
+  /* Hide dropdown on large screens */
+  @media (min-width: 1060px) {
+    .hideOnLarge {
+      display: none !important;
+    }
+  }
+  
+  /* Tablet: center content */
+  @media (min-width: 650px) and (max-width: 800px) {
+    .header-content-container {
+      justify-content: center;
+    }
+  }
+  
+  /* Small screens: hide image and center */
+  @media (max-width: 805px) {
+    img {
+      display: none;
+    }
+  
+    .header-content-container {
+      justify-content: center;
+    }
+  }
+  

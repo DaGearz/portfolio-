@@ -1,0 +1,107 @@
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  text-shadow: var(--text-shadow);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.modalContent {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modalImageWrapper {
+  flex: 1;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modalImage {
+  width: 85%;
+  height: auto;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.modalText {
+  flex: 1;
+  background-color: #f5eedc;
+  color: #183b4e;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.modalText h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.modalText p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+/* 🔴 NEW: Close Button */
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  transition: transform 0.2s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.2);
+}

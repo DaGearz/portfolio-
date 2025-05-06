@@ -1,0 +1,56 @@
+
+
+/*This will handle the overall layout of the application*/
+
+/*overall layout*/
+.container, .Home{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+/*Header Layout*/
+.Header{
+    height: 4rem;
+    width: 100%;
+    background-color: #F5EEDC;
+    box-shadow: 0 2px 3px #183B4E;
+    display: flex;
+}
+
+
+/* Body Layout*/
+/* Footer Layout*/
+
+
+.Footer {
+    margin-top: auto;
+    color: #27548A;
+    background-color: #DDA853;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+.Home{
+    min-height: 100vh;
+    display: Flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.body-container{
+    flex-grow: 1;
+    display: flex;
+}
+
+

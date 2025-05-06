@@ -1,0 +1,72 @@
+/* ========== NAV CONTAINER ========== */
+.MainNav {
+  background-color: var(--light-bg);
+  font-family: sans-serif;
+  margin-top: 0;
+}
+
+/* ========== NAV LIST ========== */
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+/* ========== NAV ITEM ========== */
+.nav-item {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ========== NAV LINKS ========== */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--link-color);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* ========== NAV SELECT DROPDOWN ========== */
+.nav-select {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--link-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  vertical-align: middle;
+  height: 100%;
+  display: inline-block;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-select:focus,
+.nav-select:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* ========== RESPONSIVE HELPERS ========== */
+.hideOnLarge {
+  display: none !important;
+}
