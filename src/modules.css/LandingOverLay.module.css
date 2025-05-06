@@ -18,6 +18,9 @@
 
 .landing-overlay img{
     box-shadow: 0 0 2px 2px #DDA853;
+    height: 10rem;
+    border-radius: 50%;
+    border: 2px solid #183B4E;
 }
 
 .overlay-main-nav{
