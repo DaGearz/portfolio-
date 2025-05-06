@@ -83,3 +83,12 @@
 .appSelector select{
     margin-left: 20px;
 }
+
+.homeContainer > p:first-of-type {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.greetings{
+    font-size: 1.7rem;
+}

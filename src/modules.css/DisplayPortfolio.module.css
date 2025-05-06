@@ -4,17 +4,18 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    border: 10px red solid;
+    
     align-items: center;
 }
 
 .portfoliocontent{
-    background-color: #DDA853 ;
+    background-color: #F5EEDC ;
     width: 300px;
     margin-top: -5px;
     border-radius: 0 0 20px 20px;
     padding: 20px;
     box-shadow: 2px 2px 5px  #183B4E;
+    color: #183B4E;
 }
 
 .portfoliocontent h1{
@@ -28,4 +29,32 @@
 }
 .containerIframe img, .containerIframe iframe{
     border-radius: 20px 20px 0 0;
+}
+.skillsUsed{
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    column-gap: 6px;
+    margin-top: -20px;
+    flex-wrap: wrap;
+}
+
+
+
+.links{
+    display: flex;
+    margin-top: -20px;
+}
+.portfoliocontent > h1:hover {
+    text-shadow: 2px 2px 2px#DDA853;
+} 
+.skills{
+    background-color: #DDA853;
+    color: #183B4E;
+    padding: 3px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.links a {
+    margin-left: 5px;
 }

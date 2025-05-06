@@ -23,7 +23,7 @@ export default function Home() {
     <MainLayout>
       <main className={styles.Home}>
         <div className={`${styles.homeContainer}`}>
-          <div>{greeting}</div>
+          <div className={styles.greeting}>{greeting}</div>
           <p>{quotes}</p>
           <button onClick={randomGreeting} className={styles.ranButton} type="button">
             Randomize

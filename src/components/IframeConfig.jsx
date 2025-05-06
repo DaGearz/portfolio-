@@ -16,8 +16,7 @@ const IframeConfig = ({imgIFrame}) => {
       style={{
         pointerEvents: "none",       
         overflow: "hidden",
-        border: "none",
-        boxShadow=          
+        border: "none",         
       }}
       scrolling="no" 
     />
