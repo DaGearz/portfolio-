@@ -1,4 +1,4 @@
-import TicTacToe from "../components/homePageGames/TicTacToe"
+import TicTacToe from "../components/homePageGames/TicTacToe/TicTacToe"
 
 
 const chooseAppData = [

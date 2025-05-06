@@ -18,7 +18,10 @@
     width: 90%;
     padding: 10px;
     border-radius: 10px;
-    border: 10px sold red;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
     
 }
 
@@ -58,27 +61,26 @@
 
 }
 
-.apps{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    
-    justify-content: start;
-}
+.apps {
+    display: block; /* ← stop using flex unless absolutely needed */
+    overflow: visible;
+  }
 
 .appSelector{
     width: 100%;
     padding-bottom: 5px;
     
 }
-.visibleApp{
+.visibleApp {
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
-    width: 100%;
     display: flex;
     justify-content: center;
-    
-}
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow: visible;
+  }
 
 .appSelector select{
     margin-left: 20px;
@@ -87,6 +89,7 @@
 .homeContainer > p:first-of-type {
     font-size: 1.3rem;
     font-weight: bold;
+    flex-grow: 1;
 }
 
 .greetings{
