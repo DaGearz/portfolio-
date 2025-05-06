@@ -3,31 +3,15 @@ const projectsData = [
     {
         title:null,
         discription:null,
-        img: {
-            img:null,
-            exist: true
-        },
-        img:{
-            variable:null;
-            exist: false;
-        }
+        img: null,
+        imgSnippet: null
         tech: [null],
-        git1:{
-            git:null,
-            exist: true
-        },
-        git2:{
-            git:null,
-            exist: true
-        },
-        website:{
-            address:null;
-            exist: true
-        }
-        use: true
-
-
-    }
+        git1: null,
+        git2:null,
+        website:null,
+        usePortfolio: true,
+        useFeatured: true
+    },
 
 ]
 
