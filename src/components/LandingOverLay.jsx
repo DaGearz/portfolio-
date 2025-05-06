@@ -1,6 +1,8 @@
 import styles from "../modules.css/LandingOverLay.module.css";
 import landingImage from "../assets/profilepic.jpg";
 import LandingNav from "./LandingNav";
+import projectsData from "../data/projectsData";
+import DisplayPortfolio from "./DisplayPortfolio";
 
 export default function LandingOverlay({ handleClose }) {
   return (
@@ -10,7 +12,7 @@ export default function LandingOverlay({ handleClose }) {
         <LandingNav handleClose={handleClose} />
         <h1>Featured Projects</h1>
         <div className={styles.featuredProjects}>
-          place holder
+          {projectsData.map(project =>  project.usePortfolio && <DisplayPortfolio key={project.id} projectData = {project}/>)}
         </div>
       </div>
       <span className={styles.exit} onClick={handleClose}>X</span>

@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from "../modules.css/DisplayPortfolio.module.css"
 import IframeConfig from './IframeConfig'
-import { Github, Dock } from "lucide-react";
 import { useState } from 'react';
 
 const DisplayPortfolio = ({projectData}) => {
@@ -37,12 +36,12 @@ const DisplayPortfolio = ({projectData}) => {
                 </div>
                 <p>Links:</p>
                 <div className={styles.links}>
-                    {git1 && <p><a href={git1} target="_blank" rel="noopener        noreferrer">
-                        <Github size={24} /></a></p>}
-                    {git2 && <p><a href={git2} target="_blank" rel="noopener        noreferrer">
-                    <Github size={24} /></a></p>}
-                    {website && <p><a href={website} target="_blank" rel="noopener        noreferrer">
-                    <Dock size={24} /></a></p>}
+                    <ul>
+                        {git1[0] && <li><a href={git1[0]} target="_blank" rel="noopener noreferrer">{git1[1]}</a></li>}
+                        {git2[0] && <li><a href={git2[0]} target="_blank" rel="noopener noreferrer">{git2[1]}</a></li>}
+                        {website && <li><a href={website} target="_blank" rel="noopener noreferrer">Deployed Website</a></li>}
+                    </ul>
+            
                 </div>
             
             </div>)}

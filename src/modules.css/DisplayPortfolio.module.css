@@ -57,4 +57,15 @@
 
 .links a {
     margin-left: 5px;
+    text-decoration: none;
+    color: #183B4E;
+}
+
+
+.links a:hover {
+    color: #DDA853;
+}
+
+.links ul {
+    list-style: none;
 }

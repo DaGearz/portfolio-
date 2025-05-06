@@ -39,10 +39,10 @@
 }
 
 .featuredProjects{
-    height: 300px;
     width: 700px;
     background-color: var(--accent-color);
     border-radius: 10px;
+    display: flex;
 }
 
 .exit{

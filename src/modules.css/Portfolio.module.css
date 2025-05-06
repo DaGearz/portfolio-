@@ -1,5 +1,6 @@
 .Portfolio{
     width: 100%;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
@@ -10,4 +11,9 @@
     row-gap: 50px;
 }
 
+
+.Portfolio > div {
+    transform: scale(0.8);  /* 80% size */
+  transform-origin: top left; 
+}
 

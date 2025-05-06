@@ -11,11 +11,11 @@ const projectsData = [
         img: null,
         imgIFrame:"http://localhost:5173/",
         tech: ["HTML", "CSS", "React", "VS Code", "ReactLibraries"],
-        git1: "https://github.com/DaGearz/language_game",
-        git2:null,
+        git1: ["https://github.com/DaGearz/language_game", "FrontEnd Code"],
+        git2:[null,null],
         website:"https://dagearz.github.io/language_game/",
         usePortfolio: true,
-        useFeatured: true
+        useFeatured: false
     },
     {
         id:2,
@@ -24,8 +24,8 @@ const projectsData = [
         img: null,
         imgIFrame:"https://dagearz.github.io/language_game/",
         tech: ["HTML", "CSS", "React", "VS Code","ReactLibraries"],
-        git1: "https://github.com/DaGearz/language_game",
-        git2:null,
+        git1: ["https://github.com/DaGearz/language_game", "FrontEnd Code"],
+        git2:[null,null],
         website:"https://dagearz.github.io/language_game/",
         usePortfolio: true,
         useFeatured: true
@@ -37,11 +37,24 @@ const projectsData = [
         img: null,
         imgIFrame:"https://dagearz.github.io/kmz_toGoogleMaps/",
         tech: ["HTML", "CSS", "React", "VS Code", "GoogleAPI", "ReactLibraries"],
-        git1: "https://github.com/DaGearz/kmz_toGoogleMaps",
-        git2:null,
+        git1: ["https://github.com/DaGearz/kmz_toGoogleMaps", "FrontEnd Code"],
+        git2:[null,null],
         website:"https://dagearz.github.io/kmz_toGoogleMaps/",
         usePortfolio: true,
         useFeatured: true
+    },
+    {
+        id:4,
+        title:"MERN Stack Tutorial",
+        description:"Worked through tutorial to learn node.js, express, and mongo DB. Built a note keeping app for fictitious company",
+        img: noPhoto,
+        imgIFrame:null,
+        tech: ["HTML", "CSS", "Node.js", "React", "express", "NPM", "MongoDB"],
+        git1: ["https://github.com/DaGearz/mern_tutorial_FE", "FrontEnd Code"],
+        git2:["https://github.com/DaGearz/mern_tutorial","BackendEnd Code"],
+        website:null,
+        usePortfolio: true,
+        useFeatured: false
     },
 
 

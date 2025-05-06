@@ -9,7 +9,7 @@ const Portfolio = () => {
   return (
     <MainLayout >
       <div className={styles.Portfolio}>
-        {projectsData.map(project =>  project.usePortfolio && <DisplayPortfolio projectData = {project}/>)}
+        {projectsData.map(project =>  project.usePortfolio && <DisplayPortfolio key={project.id} projectData = {project}/>)}
       </div>
     </MainLayout>
   )
