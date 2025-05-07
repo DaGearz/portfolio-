@@ -1,26 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MainLayout from "../templates/MainLayout";
 import LandingOverlay from "../components/LandingOverlay";
 import styles from "../modules.css/Home.module.css";
 import { greetings, buttonQuotes } from "../data/greetingsData";
 import chooseAppData from "../data/chooseAppData.jsx";
-import Default from "../components/homePageGames/Default.jsx";
+import Default from "../components/homePageGames/Default/Default.jsx";
+import DisplayPortfolio from "../components/DisplayPortfolio.jsx";
+import projectsData from "../data/projectsData.jsx";
 
 export default function Home() {
+  // STATE: UI logic
   const [showOverlay, setShowOverlay] = useState(false);
-  const [greeting, setGreeting] = useState(`Hi, my name is Todd — but online, I go by my OG gamertag: DaGearz. I’m kicking off my career as a software developer, and this site is just the beginning. Check out what I can do, and if you like what you see, don’t be shy — reach out! I’m ready to work, build, and grow with the right team.`);
-  const [quotes, setQuotes] = useState("This intro kinda sucks, not gonna lie. Smash that button and roll the dice on a better one.");
-  const [selectedApp, setSelectedApp] = useState(null);
+  const [greeting, setGreeting] = useState(
+    `Hi, my name is Todd — but online, I go by my OG gamertag: DaGearz. I’m kicking off my career as a software developer, and this site is just the beginning. Check out what I can do, and if you like what you see, don’t be shy — reach out! I’m ready to work, build, and grow with the right team.`
+  );
+  const [quotes, setQuotes] = useState(
+    "This intro kinda sucks, not gonna lie. Smash that button and roll the dice on a better one."
+  );
+  const [selectedApp, setSelectedApp] = useState(() => {
+    return localStorage.getItem("selectedApp") || "default";
+  });
   const [name, setName] = useState(() => {
     return localStorage.getItem("name") || "User";
   });
 
+  // EFFECT: Save selectedApp to localStorage when changed
+  useEffect(() => {
+    localStorage.setItem("selectedApp", selectedApp);
+  }, [selectedApp]);
+
+  // EVENT: Update name and sync with localStorage
   const handleChange = (e) => {
     const value = e.target.value;
     setName(value);
     localStorage.setItem("name", value);
   };
 
+  // EVENT: Randomize greeting and quote
   const randomGreeting = () => {
     const indexG = Math.floor(Math.random() * greetings.length);
     const indexQ = Math.floor(Math.random() * buttonQuotes.length);
@@ -31,18 +47,25 @@ export default function Home() {
   return (
     <MainLayout>
       <main className={styles.Home}>
+        {/* INTRO SECTION */}
         <div className={styles.homeContainer}>
           <div className={styles.greeting}>{greeting}</div>
           <p>{quotes}</p>
-          <button onClick={randomGreeting} className={styles.ranButton} type="button">
+          <button 
+            onClick={randomGreeting} 
+            className={styles.ranButton} 
+            type="button"
+          >
             Randomize
           </button>
         </div>
 
-        <div className={`${styles.homeContainer} ${styles.featured}`}>
+        {/* NAME INPUT SECTION */}
+        <div className={`${styles.homeContainer} ${styles.clickMe}`}>
           <p>Hey, insert your name and click below.</p>
           <input 
             type="text" 
+            className={styles.input}
             value={name} 
             placeholder="Insert Name" 
             onChange={handleChange}
@@ -52,12 +75,25 @@ export default function Home() {
           </div>
         </div>
 
+        {/* HIGHLIGHTED PROJECTS */}
+        <div className={`${styles.homeContainer}`}>
+          <div className={styles.titleFeatured}>
+            Featured Projects:
+          </div>
+          <div className={styles.featured}>
+             {projectsData.map(project =>  project.useFeatured && <DisplayPortfolio key={project.id} projectData = {project}/>)}
+          </div>
+        </div>
+
+
+
+        {/* MINI APP SELECTOR SECTION */}
         <div className={`${styles.homeContainer} ${styles.apps}`}>
           <div className={styles.appSelector}>
             <label htmlFor="apps">Please select a mini component to enjoy:</label>
             <select 
               id="apps" 
-              defaultValue="default" 
+              value={selectedApp} 
               onChange={(e) => setSelectedApp(e.target.value)}
             >
               <option key="0" value="default">Choose Option</option>
@@ -72,6 +108,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* OVERLAY MODAL */}
         {showOverlay && (
           <div className={styles["landing-overlay"]}>
             <LandingOverlay handleClose={() => setShowOverlay(false)} name={name} />

@@ -15,7 +15,7 @@ const projectsData = [
         git2:[null,null],
         website:"https://dagearz.github.io/language_game/",
         usePortfolio: true,
-        useFeatured: false
+        useFeatured: false 
     },
     {
         id:2,

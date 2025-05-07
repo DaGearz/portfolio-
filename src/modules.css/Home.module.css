@@ -1,4 +1,4 @@
-.Home{
+.Home {
     background-color: #183B4E;
     min-height: 100%;
     width: 80%;
@@ -6,14 +6,15 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: start;
     align-items: center;
-}
-
-.Home > div {
+  }
+  
+  .Home > div {
     margin-top: 10px;
-}
-.homeContainer{
+  }
+  
+  /* === Section Containers === */
+  .homeContainer {
     background-color: #DDA853;
     width: 90%;
     padding: 10px;
@@ -23,55 +24,74 @@
     align-items: stretch;
     height: auto;
     
-}
-
-.homeContainer div, .homeContainer p{
-   
-    color: #183B4E ;
-}
-
-.ranButton{
-   
+  }
+  
+  /* Text + Nested Elements in Container */
+  .homeContainer div,
+  .homeContainer p {
+    color: #183B4E;
+  }
+  
+  /* === Greeting Section === */
+  .greeting {
+    font-size: 1.7rem;
+  }
+  
+  .homeContainer > p:first-of-type {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .titleFeatured {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  
+  /* === Button Styling === */
+  .ranButton {
     padding: 2px;
-    background-color: #F5EEDC ;
+    background-color: #F5EEDC;
     border-radius: 5px;
-
-}
-
-.ranButton:hover{
-   
-    
-    background-color: lightgreen ;
-    border-radius: 5px;
-
-}
-
-
-.featured div {
+    width: 100px;
+  }
+  
+  .ranButton:hover {
+    background-color: lightgreen;
+  }
+  
+  /* === Featured (Name Input Section) === */
+  .clickMe div {
     margin: 0 auto;
     text-align: center;
     font-size: 3rem;
-}
+  }
 
-.featured div span:hover{
+  
+  .clickMe div span:hover {
     border: 2px double #183B4E;
     padding: 5px;
     border-radius: 15px;
     background-color: yellow;
-
-}
-
-.apps {
-    display: block; /* ← stop using flex unless absolutely needed */
+  }
+  
+  /* === App Selector Section === */
+  .apps {
+    display: block;
     overflow: visible;
   }
-
-.appSelector{
+  
+  .appSelector {
     width: 100%;
     padding-bottom: 5px;
-    
-}
-.visibleApp {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  
+  .appSelector select {
+    margin-left: 20px;
+  }
+  
+  /* === App Display Area === */
+  .visibleApp {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
@@ -81,17 +101,25 @@
     flex-wrap: wrap;
     overflow: visible;
   }
-
-.appSelector select{
-    margin-left: 20px;
-}
-
-.homeContainer > p:first-of-type {
-    font-size: 1.3rem;
-    font-weight: bold;
-    flex-grow: 1;
-}
-
-.greetings{
+  
+  /* === Input Field === */
+  .input {
+    width: 300px;
+    height: 2rem;
     font-size: 1.7rem;
-}
+  }
+
+  .featured{
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: auto;
+    gap: 10px;
+    
+  }
+  

@@ -1,0 +1,75 @@
+.default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem; /* ensures spacing between image and slider */
+}
+
+.imageWrapper {
+  position: relative;
+  width: 400px;
+  height: 533px;
+  overflow: hidden;
+  background-color: black; /* optional for visual clarity */
+}
+
+.defaultImg,
+.grayImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.defaultImg {
+  z-index: 1;
+}
+
+.grayImg {
+  z-index: 2;
+  pointer-events: none;
+  
+}
+
+.slider {
+  width: 400px;
+  appearance: none;
+  height: 6px;
+  background: #ccc;
+  border-radius: 5px;
+  outline: none;
+  z-index: 3;
+  position: relative;
+}
+
+/* Optional: Style the thumb */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: red;
+  z-index: 3;
+  transform: translateX(-1px); /* centers the bar */
+}
