@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import styles from '../modules.css/Resume.module.css';
 import MainLayout from "../templates/MainLayout";
 
@@ -10,13 +11,13 @@ const Resume = () => {
         <div className={styles.containers}>
           <h2>Quick Links</h2>
           <ul className={styles.linkList}>
-            <li><a href="#summary">Professional Summary</a></li>
-            <li><a href="#skills">Technical Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Professional Experience</a></li>
-            <li><a href="#military">Military Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#interests">Interests</a></li>
+            <li><HashLink smooth to="#summary">Professional Summary</HashLink></li>
+            <li><HashLink smooth to="#skills">Technical Skills</HashLink></li>
+            <li><HashLink smooth to="#projects">Projects</HashLink></li>
+            <li><HashLink smooth to="#experience">Professional Experience</HashLink></li>
+            <li><HashLink smooth to="#military">Military Experience</HashLink></li>
+            <li><HashLink smooth to="#education">Education</HashLink></li>
+            <li><HashLink smooth to="#interests">Interests</HashLink></li>
             <li>
               <a
                 href="https://drive.google.com/file/d/1Go0AoheDy4y1KkISa8nlwdF_wttPpSnm/view?usp=sharing"
@@ -46,9 +47,9 @@ const Resume = () => {
 
         <div id="projects" className={styles.containers}>
           <h1>PROJECTS</h1>
-          <p><strong>Portfolio Website –</strong> React, CSS Modules<br/>Showcases personal brand, development projects, and contact information. Responsive design with clean, modern UI.</p>
-          <p><strong>Task Tracker API –</strong> Node.js, Express, MongoDB<br/>A backend RESTful API to create, update, and delete tasks with authentication and persistent storage using MongoDB.</p>
-          <p><strong>Language Game App –</strong> JavaScript, HTML/CSS<br/>An educational game that converts user input to Pig Latin. Uses clean form handling and real-time DOM updates.</p>
+          <p><strong>Portfolio Website –</strong> React, CSS Modules<br />Showcases personal brand, development projects, and contact information. Responsive design with clean, modern UI.</p>
+          <p><strong>Task Tracker API –</strong> Node.js, Express, MongoDB<br />A backend RESTful API to create, update, and delete tasks with authentication and persistent storage using MongoDB.</p>
+          <p><strong>Language Game App –</strong> JavaScript, HTML/CSS<br />An educational game that converts user input to Pig Latin. Uses clean form handling and real-time DOM updates.</p>
         </div>
 
         <div id="experience" className={styles.containers}>

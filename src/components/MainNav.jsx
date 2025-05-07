@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styles from "../modules.css/MainNav.module.css";
 import useWindowWidth from "../hooks/useWindowWidth";
 
@@ -24,9 +25,9 @@ export default function MainNav({ navVariables }) {
           if (!navItem.isSelect) {
             return (
               <li key={navItem.id} className={itemClass}>
-                <a href={navItem.path} className={styles["nav-link"]}>
+                <Link to={navItem.path} className={styles["nav-link"]}>
                   {navItem.name}
-                </a>
+                </Link>
               </li>
             );
           }
@@ -46,7 +47,8 @@ export default function MainNav({ navVariables }) {
                 onChange={(e) => {
                   const path = e.target.value;
                   if (path !== "default") {
-                    window.location.href = path;
+                    // React-router way:
+                    window.location.hash = `#${path}`;
                   }
                 }}
               >
