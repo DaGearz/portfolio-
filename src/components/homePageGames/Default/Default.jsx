@@ -1,18 +1,21 @@
 import React, { useState } from 'react'
 import intoTheAbyss from '../../../assets/intoTheAbyss.jpg'
 import intoTheAbyssGray from '../../../assets/intoTheAbyss-gray.jpg'
+import intoTheAbyssCartoon from '../../../assets/intoTheAbyss-cartoon.png'
 import styles from './Default.module.css'
 
 const Default = () => {
-  const [sliderValue, setSliderValue] = useState(50)
+  const [sliderValue, setSliderValue] = useState(() => {
+    return localStorage.getItem("slider") || 50;
+  })
 
   return (
     <div className={styles.default}>
       <div className={styles.imageWrapper}>
         <img src={intoTheAbyss} alt="Color" className={styles.defaultImg} />
         <img
-          src={intoTheAbyssGray}
-          alt="Grayscale"
+          src={intoTheAbyssCartoon}
+          alt="cartoon img of me"
           className={styles.grayImg}
           style={{ clipPath: `inset(0 ${100 - sliderValue}% 0 0)` }}
         />
@@ -27,7 +30,10 @@ const Default = () => {
         min="0"
         max="100"
         value={sliderValue}
-        onChange={(e) => setSliderValue(e.target.value)}
+        onChange={(e) => {
+          setSliderValue(e.target.value)
+          localStorage.setItem("slider", e.target.value)
+        }}
         className={styles.slider}
       />
     </div>
@@ -35,3 +41,4 @@ const Default = () => {
 }
 
 export default Default
+

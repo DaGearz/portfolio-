@@ -59,3 +59,7 @@
     margin: 2rem 1rem;
   }
 }
+.imgContainer img{
+  box-shadow: 0 0 2px 3px;
+  color:#183b4e;
+}

@@ -1,9 +1,10 @@
 .boardContainer{
-    width: 200px;
-    height: auto;
     display: grid;
-    grid-template-columns:100px 100px 100px;
-    grid-template-rows:100px 100px 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 300px;
+  height: 300px;
+  gap: 2px; 
 }
 
 .squareBTN:hover{
@@ -20,4 +21,11 @@
     height: 100%;
     font-size: 4rem;
     font-weight: bold;
+}
+
+.areaContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
 }

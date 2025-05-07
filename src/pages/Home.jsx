@@ -76,7 +76,7 @@ export default function Home() {
         </div>
 
         {/* HIGHLIGHTED PROJECTS */}
-        <div className={`${styles.homeContainer}`}>
+        <div className={`${styles.homeContainerHigh}`}>
           <div className={styles.titleFeatured}>
             Featured Projects:
           </div>
