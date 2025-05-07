@@ -7,13 +7,13 @@ const projectsData = [
     {
         id:1,
         title:"Portfolio Website",
-        description:"I'm hungry, I need a job",
+        description:"Portfolio website",
         img: null,
-        imgIFrame:"http://localhost:5173/",
+        imgIFrame:"https://www.toddwilliams.dev/",
         tech: ["HTML", "CSS", "React", "VS Code", "ReactLibraries"],
-        git1: ["https://github.com/DaGearz/language_game", "FrontEnd Code"],
+        git1: ["https://github.com/DaGearz/portfolio-", "FrontEnd Code"],
         git2:[null,null],
-        website:"https://dagearz.github.io/language_game/",
+        website:"https://www.toddwilliams.dev/",
         usePortfolio: true,
         useFeatured: false 
     },
