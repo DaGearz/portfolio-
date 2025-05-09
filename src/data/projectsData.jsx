@@ -56,6 +56,19 @@ const projectsData = [
         usePortfolio: true,
         useFeatured: false
     },
+    {
+        id:4,
+        title:"Custom Made GIT",
+        description:"(In Progress) creating a custom git",
+        img: noPhoto,
+        imgIFrame:null,
+        tech: ["Python"],
+        git1: ["https://github.com/DaGearz/custom_cli_git", "Code"],
+        git2:[null],
+        website:null,
+        usePortfolio: true,
+        useFeatured: true
+    },
 
 
 ]

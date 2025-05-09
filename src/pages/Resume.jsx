@@ -38,10 +38,10 @@ const Resume = () => {
         <div id="skills" className={styles.containers}>
           <h1>TECHNICAL SKILLS</h1>
           <ul>
-            <li><span className={styles.bold}>Languages & Frameworks:</span> JavaScript, Node.js, Express.js, HTML5, CSS3, MATLAB, React</li>
+            <li><span className={styles.bold}>Languages & Frameworks:</span> JavaScript, Node.js, Express.js, HTML5, CSS3, MATLAB, React, Python</li>
             <li><span className={styles.bold}>Databases:</span> MongoDB, Mongoose</li>
             <li><span className={styles.bold}>Tools & Platforms:</span> Git, GitHub, RESTful APIs, Postman, VS Code</li>
-            <li><span className={styles.bold}>Other:</span> Agile, Full-Stack App Development, Engineering Problem Solving</li>
+            <li><span className={styles.bold}>Other:</span> Full-Stack App Development, Software Developer Engineering Problem Solving</li>
           </ul>
         </div>
 
