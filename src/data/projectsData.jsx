@@ -41,7 +41,7 @@ const projectsData = [
         git2:[null,null],
         website:"https://dagearz.github.io/kmz_toGoogleMaps/",
         usePortfolio: true,
-        useFeatured: true
+        useFeatured: false
     },
     {
         id:4,

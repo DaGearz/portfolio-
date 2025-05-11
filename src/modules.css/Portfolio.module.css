@@ -2,18 +2,13 @@
     width: 100%;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, 300px);
     justify-content: center;
     margin: 0 auto;
-    gap: 30px;
-    padding: 25px 50px;
+    column-gap: 50px;
+    padding: 50px 50px;
     row-gap: 50px;
     
 }
 
-
-.Portfolio > div {
-    transform: scale(0.8);  /* 80% size */
-  transform-origin: top left; 
-}
 

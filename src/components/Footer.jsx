@@ -4,7 +4,7 @@ import { Mail, Instagram, Github, Linkedin } from "lucide-react";
 
 export default function Footer() {
     return (
-        <div className={`${stylesMainLayout.Footer} ${stylesMainLayout.container}`}>
+        <footer className={`${stylesMainLayout.Footer} ${stylesMainLayout.container}`}>
             {/*<img src="./assets/footer-image.png" alt="image to merge footer and body smoothly" />*/}
             <div className= {styles.info}>&copy; 2025 Todd Williams (DaGearz)</div>
             <div className={styles["links-container"]}>
@@ -21,6 +21,6 @@ export default function Footer() {
                 </a>
             </div>
             
-        </div>
+        </footer>
     );
 }

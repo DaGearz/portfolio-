@@ -1,6 +1,7 @@
 .DisplayPortfolio{
     
-    width: 300px;
+    max-width:300px;
+    min-width:100px;
     display: flex;
     flex-direction: column;
     justify-content: start;

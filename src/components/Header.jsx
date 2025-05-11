@@ -10,7 +10,7 @@ export default function Header() {
   const width = useWindowWidth();
 
   return (
-    <div className={`bColor1 ${stylesMainLayout.Header} ${stylesMainLayout.container}`}>
+    <header className={`bColor1 ${stylesMainLayout.Header} ${stylesMainLayout.container}`}>
       <img
         src={mainlogo}
         alt="my logo combining love for coding and hiking. It also references my engineering degree"
@@ -38,6 +38,6 @@ export default function Header() {
           <MainNav navVariables={navVariables} />
         </div>
       </div>
-    </div>
+    </header>
   );
 }

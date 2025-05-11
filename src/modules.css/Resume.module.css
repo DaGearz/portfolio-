@@ -1,18 +1,20 @@
 /* Resume.module.css */
 
 .mainContainer {
-    max-width: 900px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 0;
+    width: 80%
   }
   
   .containers {
     margin: 2rem 0;
-    background-color: #f5eedc; /* Consistent with other pages */
+    
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
+    width: 80%;
+    margin: 30px auto;
   }
   
   h1 {

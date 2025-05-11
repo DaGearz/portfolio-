@@ -8,9 +8,9 @@ import projectsData from '../data/projectsData';
 const Portfolio = () => {
   return (
     <MainLayout >
-      <div className={`bColor2 ${styles.Portfolio}`}>
+      <main className={`bColor2 ${styles.Portfolio}`}>
         {projectsData.map(project =>  project.usePortfolio && <DisplayPortfolio key={project.id} projectData = {project}/>)}
-      </div>
+      </main>
     </MainLayout>
   )
 }

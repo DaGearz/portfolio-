@@ -10,6 +10,10 @@
   
 }
 
+.links-container a:hover{
+ color:  #183B4E;
+}
+
 .footer-img {
   position: absolute;
   top: 0;
