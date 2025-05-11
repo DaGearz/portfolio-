@@ -6,11 +6,22 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
  
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+   /* Breakpoints */
+   --breakpoint-large: 1060px;
+   --breakpoint-medium: 800px;
+   --breakpoint-tablet: 650px;
+ 
+   /* Colors */
+   --primary-color: #183B4E;
+   --accent-color: #DDA853;
+   --light-bg: #F5EEDC;
+   --link-color: #27548A;
+ 
 }
 
 html, #root, body{
@@ -34,5 +45,21 @@ body{
 
 footer{
   display: none;
-  
+}
+
+
+.bColor1{
+  background-color: #DDA853;
+}
+
+.bColor2{
+  background-color: #183B4E;
+}
+
+.bColor3{
+  background-color: #27548A;
+}
+
+.bColor4{
+  background-color: #F5EEDC;
 }

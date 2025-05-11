@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "../modules.css/MainNav.module.css";
 import useWindowWidth from "../hooks/useWindowWidth";
+import '../index.css'
 
 export default function MainNav({ navVariables }) {
   const width = useWindowWidth();
@@ -17,7 +18,7 @@ export default function MainNav({ navVariables }) {
   });
 
   return (
-    <nav className={styles.MainNav}>
+    <nav className={`bColor1 ${styles.MainNav}`}>
       <ul className={styles["nav-list"]}>
         {filteredNav.map((navItem) => {
           const itemClass = styles["nav-item"];

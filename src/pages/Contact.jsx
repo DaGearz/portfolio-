@@ -6,6 +6,7 @@ import { Mail, MapPin, Phone, Linkedin, Github, Globe } from "lucide-react";
 const Contact = () => {
   return (
     <MainLayout >
+      <main className={`bColor2 ${styles.Contact}`}>
         <div className={styles.contactContainer}>
         <h2>📬 Contact Me</h2>
         <p className={styles.description}>
@@ -34,6 +35,7 @@ const Contact = () => {
             </li>
         </ul>
         </div>
+      </main>
     </MainLayout>
   );
 }

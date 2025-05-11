@@ -15,9 +15,9 @@
 .Header{
     height: 4rem;
     width: 100%;
-    background-color: #F5EEDC;
     box-shadow: 0 2px 3px #183B4E;
     display: flex;
+    border-radius: 0 0 10px 10px;
 }
 
 
@@ -34,6 +34,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    
   }
 
 .Home{

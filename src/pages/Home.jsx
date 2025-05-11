@@ -7,6 +7,7 @@ import chooseAppData from "../data/chooseAppData.jsx";
 import Default from "../components/homePageGames/Default/Default.jsx";
 import DisplayPortfolio from "../components/DisplayPortfolio.jsx";
 import projectsData from "../data/projectsData.jsx";
+import "../index.css"
 
 export default function Home() {
   // STATE: UI logic
@@ -48,8 +49,8 @@ export default function Home() {
     <MainLayout>
       <main className={styles.Home}>
         {/* INTRO SECTION */}
-        <div className={styles.homeContainer}>
-          <div className={styles.greeting}>{greeting}</div>
+        <div className={`bColor4 ${styles.homeContainer}`}>
+          <div className={styles.greeting}>`{greeting}</div>
           <p>{quotes}</p>
           <button 
             onClick={randomGreeting} 
@@ -61,7 +62,7 @@ export default function Home() {
         </div>
 
         {/* NAME INPUT SECTION */}
-        <div className={`${styles.homeContainer} ${styles.clickMe}`}>
+        <div className={`bColor4 ${styles.homeContainer} ${styles.clickMe}`}>
           <p>Hey, insert your name and click below.</p>
           <input 
             type="text" 
@@ -76,7 +77,7 @@ export default function Home() {
         </div>
 
         {/* HIGHLIGHTED PROJECTS */}
-        <div className={`${styles.homeContainerHigh}`}>
+        <div className={`bColor4 ${styles.homeContainerHigh}`}>
           <div className={styles.titleFeatured}>
             Featured Projects:
           </div>
@@ -88,7 +89,7 @@ export default function Home() {
 
 
         {/* MINI APP SELECTOR SECTION */}
-        <div className={`${styles.homeContainer} ${styles.apps}`}>
+        <div className={`bColor4 ${styles.homeContainer} ${styles.apps}`}>
           <div className={styles.appSelector}>
             <label htmlFor="apps">Please select a mini component to enjoy:</label>
             <select 

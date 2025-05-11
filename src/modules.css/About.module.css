@@ -4,13 +4,12 @@
   min-height: 100%;
   width: 80%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 .introContainer {
-  margin: 50px 200px;
-  background-color: #DDA853;
+  margin: 5px 200px;
   border-radius: 10px;
-  padding: 20px;
+
 }
 .introContainer p{
   color: #183B4E;

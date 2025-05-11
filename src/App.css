@@ -1,15 +1,4 @@
 :root {
-    /* Breakpoints */
-    --breakpoint-large: 1060px;
-    --breakpoint-medium: 800px;
-    --breakpoint-tablet: 650px;
-  
-    /* Colors */
-    --primary-color: #183B4E;
-    --accent-color: #DDA853;
-    --light-bg: #F5EEDC;
-    --link-color: #27548A;
-  
     /* Shadows & Borders */
     --text-shadow: 1px 1px 1px var(--primary-color);
     --img-border: 2px solid var(--primary-color);
