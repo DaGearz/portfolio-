@@ -16,7 +16,7 @@ const Contact = () => {
 
         <ul className={styles.contactList}>
             <li>
-            <Mail size={20} /> <a href="mailto:todd.williams.dev@gmail.com">todd.williams.dev@gmail.com</a>
+            <Mail size={20} /> <a href="mailto:twill003@gmail.com">twill003@gmail.com</a>
             </li>
             <li>
             <Phone size={20} /> ‪(619) 365-5267‬
