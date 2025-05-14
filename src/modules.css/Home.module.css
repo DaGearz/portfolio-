@@ -133,4 +133,19 @@
     gap: 30px;
    
   }
+
+  .skills{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .skills li{
+    padding: 5px;
+    font-size: 1.7rem;
+    border-radius: 15px;
+    text-align: center;
+  }
   

@@ -25,6 +25,10 @@ export default function Home() {
     return localStorage.getItem("name") || "User";
   });
 
+  const allTech = [
+  ...new Set(projectsData.flatMap(project => project.tech))
+];
+
   // EFFECT: Save selectedApp to localStorage when changed
   useEffect(() => {
     localStorage.setItem("selectedApp", selectedApp);
@@ -48,19 +52,7 @@ export default function Home() {
   return (
     <MainLayout>
       <main className={styles.Home}>
-        {/* INTRO SECTION */}
-        <div className={`bColor4 ${styles.homeContainer}`}>
-          <div className={styles.greeting}>`{greeting}</div>
-          <p>{quotes}</p>
-          <button 
-            onClick={randomGreeting} 
-            className={styles.ranButton} 
-            type="button"
-          >
-            Randomize
-          </button>
-        </div>
-
+        
         {/* NAME INPUT SECTION */}
         <div className={`bColor4 ${styles.homeContainer} ${styles.clickMe}`}>
           <p>Hey, insert your name and click below.</p>
@@ -73,6 +65,20 @@ export default function Home() {
           />
           <div>
             <span onClick={() => setShowOverlay(true)}>CLICK ME</span>
+          </div>
+        </div>
+
+        {/* Skills */}
+        <div className={`bColor4 ${styles.homeContainerHigh}`}>
+          <div className={styles.titleFeatured}>
+            Skills:
+          </div>
+          <div className={styles.featured}>
+             <ul className= {styles.skills}>
+                {allTech.map(skill => (
+                  <li key={skill} className="bColor1">{skill}</li>
+                ))}
+             </ul>
           </div>
         </div>
 
@@ -112,7 +118,7 @@ export default function Home() {
         {/* OVERLAY MODAL */}
         {showOverlay && (
           <div className={styles["landing-overlay"]}>
-            <LandingOverlay handleClose={() => setShowOverlay(false)} name={name} />
+            <LandingOverlay handleClose={() => setShowOverlay(false)} name={name} greeting={greeting} quotes={quotes} randomGreeting={randomGreeting} />
           </div>
         )}
       </main>

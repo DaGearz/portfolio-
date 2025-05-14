@@ -26,7 +26,7 @@ const DisplayPortfolio = ({projectData}) => {
         :   <div className= {styles.containerIframe} >
                 <IframeConfig imgIFrame={imgIFrame}/> 
             </div>}
-        <div className= {styles.portfoliocontent}>
+        <div className= {`${styles.portfoliocontent} bColor1`}>
             <h1 onClick={toggleShow}>{title}</h1>
             {showCont && (<div className={styles.hiddenContent}>
                 <p>{description}</p>
