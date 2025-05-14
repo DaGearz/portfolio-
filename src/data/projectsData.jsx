@@ -1,5 +1,6 @@
 import noPhoto from '../assets/noPhoto.png';
 import daggit from '../assets/daggit_demo.png';
+import mernstack from '../assets/mernstack.png'
 
 const projectsData = [
   {
@@ -49,7 +50,7 @@ const projectsData = [
     title: "MERN Stack Tutorial",
     description:
       "This project is the result of working through a comprehensive tutorial that walks through building a full MERN (MongoDB, Express, React, Node.js) stack application. I built a simple note-taking web app for a fictional company, which covers frontend and backend development, API creation, and data persistence. This experience introduced me to RESTful routing, middleware, Express server logic, MongoDB document models, and React-to-backend API communication using Axios. I hosted the frontend and backend separately on GitHub, giving me experience in repo structuring and modular project development.",
-    img: noPhoto,
+    img: mernstack,
     imgIFrame: null,
     tech: ["HTML", "CSS", "Node.js", "React", "express", "NPM", "MongoDB"],
     git1: ["https://github.com/DaGearz/mern_tutorial_FE", "FrontEnd Code"],
