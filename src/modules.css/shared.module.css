@@ -1,0 +1,86 @@
+/* Common variables - move from index.css */
+:root {
+  /* Colors */
+  --primary-color: #183B4E;
+  --accent-color: #DDA853;
+  --light-bg: #F5EEDC;
+  --link-color: #27548A;
+  
+  /* Shadows & Borders */
+  --text-shadow: 1px 1px 1px var(--primary-color);
+  --img-border: 2px solid var(--primary-color);
+  --img-shadow: 0 0 4px 2px var(--primary-color);
+  
+  /* Breakpoints */
+  --breakpoint-large: 1060px;
+  --breakpoint-medium: 800px;
+  --breakpoint-tablet: 650px;
+}
+
+/* Common container styles */
+.pageContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Common card styles */
+.card {
+  background-color: var(--light-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Common heading styles */
+.heading1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.heading2 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+/* Common link styles */
+.link {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Responsive grid */
+.responsiveGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Media queries */
+@media (max-width: 1060px) {
+  .hideOnSmall {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .pageContainer {
+    width: 95%;
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+}

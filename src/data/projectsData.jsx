@@ -1,6 +1,9 @@
-import noPhoto from '../assets/noPhoto.png';
-import daggit from '../assets/daggit_demo.png';
-import mernstack from '../assets/mernstack.png'
+import noPhoto from "../assets/noPhoto.png";
+import daggit from "../assets/daggit_demo.png";
+import mernstack from "../assets/mernstack.png";
+
+// For debugging - log image imports
+console.log("Image imports loaded:", { noPhoto, daggit, mernstack });
 
 const projectsData = [
   {

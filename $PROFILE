@@ -1,0 +1,4 @@
+# Add these lines to your PowerShell profile
+$env:NVM_HOME = "$env:USERPROFILE\AppData\Roaming\nvm"
+$env:NVM_SYMLINK = "$env:USERPROFILE\AppData\Roaming\nvm\current"
+$env:PATH = "$env:NVM_SYMLINK;$env:PATH"

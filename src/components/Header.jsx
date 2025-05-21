@@ -4,13 +4,15 @@ import stylesMainLayout from "../modules.css/MainLayout.module.css";
 import mainlogo from "../assets/website_logo.png";
 import useWindowWidth from "../hooks/useWindowWidth";
 import navVariables from "../data/headerData";
-import "../index.css"
+import "../index.css";
 
 export default function Header() {
   const width = useWindowWidth();
 
   return (
-    <header className={`bColor1 ${stylesMainLayout.Header} ${stylesMainLayout.container}`}>
+    <header
+      className={`bColor1 ${stylesMainLayout.Header} ${stylesMainLayout.container}`}
+    >
       <img
         src={mainlogo}
         alt="my logo combining love for coding and hiking. It also references my engineering degree"
@@ -28,9 +30,7 @@ export default function Header() {
           </div>
         )}
         {width <= 860 && width > 550 && (
-          <div className={`${styles.title3} ${styles.title}`}>
-            Todd
-          </div>
+          <div className={`${styles.title3} ${styles.title}`}>Todd</div>
         )}
         {/* No title at all below 550px */}
 

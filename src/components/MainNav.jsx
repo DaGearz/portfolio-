@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "../modules.css/MainNav.module.css";
 import useWindowWidth from "../hooks/useWindowWidth";
-import '../index.css'
+import "../index.css";
 
 export default function MainNav({ navVariables }) {
   const width = useWindowWidth();
@@ -35,9 +35,13 @@ export default function MainNav({ navVariables }) {
 
           // Filter dropdown options dynamically
           const filteredOptions = navItem.options?.filter((opt) => {
-            if (isSmallScreen && opt.id === "O1") return false;
-            if (isPhone && opt.id === "O1") return true; // show Contact in dropdown on phones
-            return opt.id !== "O1"; // hide elsewhere
+            // Always include Resume (O2) in dropdown
+            if (opt.id === "O2") return true;
+
+            // Include Contact (O1) in dropdown when on small screens
+            if (isSmallScreen && opt.id === "O1") return true;
+
+            return false; // Hide other options
           });
 
           return (

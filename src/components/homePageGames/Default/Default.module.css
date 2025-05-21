@@ -4,14 +4,19 @@
   align-items: center;
   padding: 2rem;
   gap: 1rem; /* ensures spacing between image and slider */
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .imageWrapper {
   position: relative;
   width: 400px;
   height: 533px;
+  max-width: 100%;
   overflow: hidden;
   background-color: black; /* optional for visual clarity */
+  aspect-ratio: 3/4;
 }
 
 .defaultImg,
@@ -32,11 +37,11 @@
 .grayImg {
   z-index: 2;
   pointer-events: none;
-  
 }
 
 .slider {
   width: 400px;
+  max-width: 100%;
   appearance: none;
   height: 6px;
   background: #ccc;
@@ -64,6 +69,7 @@
   background: #007bff;
   cursor: pointer;
 }
+
 .divider {
   position: absolute;
   top: 0;
@@ -72,4 +78,15 @@
   background-color: red;
   z-index: 3;
   transform: translateX(-1px); /* centers the bar */
+}
+
+/* Responsive styles */
+@media (max-width: 450px) {
+  .imageWrapper {
+    height: 400px;
+  }
+
+  .default {
+    padding: 1rem;
+  }
 }

@@ -1,26 +1,43 @@
+import React, { useState } from "react";
+import styles from "../modules.css/IframeConfig.module.css";
+import noPhoto from "../assets/noPhoto.png";
 
-import React from 'react'
-import styles from '../modules.css/IframeConfig.module.css'
+const IframeConfig = ({ imgIFrame }) => {
+  const [iframeError, setIframeError] = useState(false);
 
+  const handleIframeError = () => {
+    console.error(`Failed to load iframe: ${imgIFrame}`);
+    setIframeError(true);
+  };
 
-const IframeConfig = ({imgIFrame}) => {
+  if (!imgIFrame || iframeError) {
+    return (
+      <img
+        src={noPhoto}
+        alt="No preview available"
+        width="300"
+        height="300"
+        className={styles.fallbackImage}
+      />
+    );
+  }
 
-  
   return (
-    
-    <iframe className={styles.IframeConfig}
+    <iframe
+      className={styles.IframeConfig}
       src={imgIFrame}
       width="300"
       height="300"
       loading="lazy"
       style={{
-        pointerEvents: "none",       
+        pointerEvents: "none",
         overflow: "hidden",
-        border: "none",         
+        border: "none",
       }}
-      scrolling="no" 
+      scrolling="no"
+      onError={handleIframeError}
     />
-  )
-}
+  );
+};
 
-export default IframeConfig
+export default IframeConfig;
