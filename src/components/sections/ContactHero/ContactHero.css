@@ -1,0 +1,231 @@
+/* Contact Hero Section */
+.contact-hero {
+  padding: var(--space-24) 0 var(--space-16) 0;
+  background: linear-gradient(135deg, var(--neutral-50) 0%, var(--primary-50) 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.contact-hero__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.contact-hero__title {
+  font-size: var(--text-5xl);
+  color: var(--neutral-900);
+  margin-bottom: var(--space-4);
+  font-family: var(--font-family-serif);
+}
+
+.contact-hero__subtitle {
+  font-size: var(--text-xl);
+  color: var(--accent-600);
+  font-weight: 600;
+  margin-bottom: var(--space-6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-hero__description {
+  font-size: var(--text-lg);
+  color: var(--neutral-700);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.contact-hero__quick-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.contact-hero__cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  font-size: var(--text-base);
+}
+
+.contact-hero__cta-button--primary {
+  background: var(--accent-600);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-hero__cta-button--primary:hover {
+  background: var(--accent-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.contact-hero__cta-button--secondary {
+  background: white;
+  color: var(--neutral-700);
+  border: 2px solid var(--neutral-200);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-hero__cta-button--secondary:hover {
+  background: var(--neutral-50);
+  border-color: var(--accent-300);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Visual Elements */
+.contact-hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.contact-hero__floating-elements {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.contact-hero__floating-element {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-2xl);
+  box-shadow: var(--shadow-lg);
+  animation: float 6s ease-in-out infinite;
+}
+
+.contact-hero__floating-element--1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.contact-hero__floating-element--2 {
+  top: 10%;
+  right: 20%;
+  animation-delay: 1.5s;
+}
+
+.contact-hero__floating-element--3 {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 3s;
+}
+
+.contact-hero__floating-element--4 {
+  bottom: 20%;
+  right: 10%;
+  animation-delay: 4.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: var(--space-16) 0;
+    min-height: auto;
+  }
+
+  .contact-hero__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+
+  .contact-hero__visual {
+    order: -1;
+    height: 250px;
+  }
+
+  .contact-hero__floating-elements {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contact-hero__floating-element {
+    width: 3rem;
+    height: 3rem;
+    font-size: var(--text-xl);
+  }
+
+  .contact-hero__title {
+    font-size: var(--text-3xl);
+  }
+
+  .contact-hero__subtitle {
+    font-size: var(--text-lg);
+  }
+
+  .contact-hero__description {
+    font-size: var(--text-base);
+  }
+
+  .contact-hero__quick-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero__container {
+    padding: 0 var(--space-3);
+  }
+
+  .contact-hero__title {
+    font-size: var(--text-2xl);
+  }
+
+  .contact-hero__quick-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-hero__cta-button {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+
+  .contact-hero__visual {
+    height: 200px;
+  }
+
+  .contact-hero__floating-elements {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-hero__floating-element {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: var(--text-lg);
+  }
+}

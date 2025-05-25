@@ -1,0 +1,200 @@
+/* Modern Card Component */
+.card {
+  background: white;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--neutral-200);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Card Variants */
+.card--default {
+  background: white;
+  border-color: var(--neutral-200);
+}
+
+.card--elevated {
+  background: white;
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.card--outlined {
+  background: white;
+  border: 2px solid var(--neutral-300);
+}
+
+.card--glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card--gradient {
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--accent-50) 100%);
+  border: 1px solid var(--accent-200);
+}
+
+/* Card Padding */
+.card--padding-none {
+  padding: 0;
+}
+
+.card--padding-sm {
+  padding: var(--space-3);
+}
+
+.card--padding-md {
+  padding: var(--space-6);
+}
+
+.card--padding-lg {
+  padding: var(--space-8);
+}
+
+.card--padding-xl {
+  padding: var(--space-10);
+}
+
+/* Card Shadows */
+.card--shadow-none {
+  box-shadow: none;
+}
+
+.card--shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.card--shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.card--shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.card--shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+/* Hover Effects */
+.card--hover {
+  cursor: pointer;
+}
+
+.card--hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-300);
+}
+
+.card--hover:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Components */
+.card__header {
+  padding: var(--space-6) var(--space-6) 0 var(--space-6);
+  border-bottom: 1px solid var(--neutral-200);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+}
+
+.card__body {
+  flex: 1;
+}
+
+.card__footer {
+  padding: var(--space-4) var(--space-6) var(--space-6) var(--space-6);
+  border-top: 1px solid var(--neutral-200);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.card__title {
+  font-family: var(--font-family-serif);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.3;
+}
+
+.card__description {
+  font-size: var(--text-base);
+  color: var(--neutral-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Card with no padding adjustments for header/footer */
+.card--padding-none .card__header {
+  padding: var(--space-6);
+  margin-bottom: 0;
+}
+
+.card--padding-none .card__footer {
+  padding: var(--space-6);
+  margin-top: 0;
+}
+
+.card--padding-sm .card__header {
+  padding: var(--space-3) var(--space-3) 0 var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.card--padding-sm .card__footer {
+  padding: var(--space-2) var(--space-3) var(--space-3) var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.card--padding-lg .card__header {
+  padding: var(--space-8) var(--space-8) 0 var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.card--padding-lg .card__footer {
+  padding: var(--space-6) var(--space-8) var(--space-8) var(--space-8);
+  margin-top: var(--space-8);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .card--padding-md {
+    padding: var(--space-4);
+  }
+  
+  .card--padding-lg {
+    padding: var(--space-6);
+  }
+  
+  .card--padding-xl {
+    padding: var(--space-8);
+  }
+  
+  .card__header {
+    padding: var(--space-4) var(--space-4) 0 var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  
+  .card__footer {
+    padding: var(--space-3) var(--space-4) var(--space-4) var(--space-4);
+    margin-top: var(--space-4);
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .card__title {
+    font-size: var(--text-lg);
+  }
+  
+  .card__description {
+    font-size: var(--text-sm);
+  }
+}
