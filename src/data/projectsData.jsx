@@ -14,6 +14,7 @@ const projectsData = [
     img: null,
     imgIFrame: "https://www.toddwilliams.dev/",
     tech: ["HTML", "CSS", "React", "VS Code", "ReactLibraries"],
+    category: "frontend", // Options: "frontend", "backend", "fullstack"
     git1: ["https://github.com/DaGearz/portfolio-", "FrontEnd Code"],
     git2: [null, null],
     website: "https://www.toddwilliams.dev/",
@@ -28,6 +29,7 @@ const projectsData = [
     img: null,
     imgIFrame: "https://dagearz.github.io/language_game/",
     tech: ["HTML", "CSS", "React", "VS Code", "ReactLibraries"],
+    category: "frontend", // Options: "frontend", "backend", "fullstack"
     git1: ["https://github.com/DaGearz/language_game", "FrontEnd Code"],
     git2: [null, null],
     website: "https://dagearz.github.io/language_game/",
@@ -42,6 +44,7 @@ const projectsData = [
     img: null,
     imgIFrame: "https://dagearz.github.io/kmz_toGoogleMaps/",
     tech: ["HTML", "CSS", "React", "VS Code", "GoogleAPI", "ReactLibraries"],
+    category: "frontend", // Options: "frontend", "backend", "fullstack"
     git1: ["https://github.com/DaGearz/kmz_toGoogleMaps", "FrontEnd Code"],
     git2: [null, null],
     website: "https://dagearz.github.io/kmz_toGoogleMaps/",
@@ -56,6 +59,7 @@ const projectsData = [
     img: mernstack,
     imgIFrame: null,
     tech: ["HTML", "CSS", "Node.js", "React", "express", "NPM", "MongoDB"],
+    category: "fullstack", // Options: "frontend", "backend", "fullstack"
     git1: ["https://github.com/DaGearz/mern_tutorial_FE", "FrontEnd Code"],
     git2: ["https://github.com/DaGearz/mern_tutorial", "BackendEnd Code"],
     website: null,
@@ -70,6 +74,7 @@ const projectsData = [
     img: daggit,
     imgIFrame: null,
     tech: ["Python"],
+    category: "backend", // Options: "frontend", "backend", "fullstack"
     git1: ["https://github.com/DaGearz/custom_cli_git", "Code"],
     git2: [null],
     website: null,

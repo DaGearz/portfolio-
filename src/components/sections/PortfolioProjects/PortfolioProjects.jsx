@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Card from "../../ui/Card/Card";
 import Button from "../../ui/Button/Button";
+import IframePreview from "../../ui/IframePreview/IframePreview";
 import projectsData from "../../../data/projectsData";
+import noPhoto from "../../../assets/noPhoto.png";
 import "./PortfolioProjects.css";
 
 const PortfolioProjects = () => {
@@ -20,26 +22,19 @@ const PortfolioProjects = () => {
         5: "Custom Git implementation in Python called 'daggit'. Recreates core Git functionality including file tracking, hashing, and version control concepts.",
       };
 
-      // Determine category based on tech stack
-      let category = "web";
-      if (
-        project.tech.includes("MongoDB") &&
-        project.tech.includes("Node.js")
-      ) {
-        category = "fullstack";
-      } else if (project.tech.includes("Python")) {
-        category = "backend";
-      }
+      // Use the category from project data
+      const category = project.category || "frontend";
 
-      // Get image - use project image or fallback
-      let imageUrl =
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop";
+      // Get image - use project image, iframe preview, or fallback
+      let imageUrl = noPhoto;
+      let useIframe = false;
+
       if (project.img) {
         imageUrl = project.img;
       } else if (project.imgIFrame) {
-        // For iframe projects, use a code/web development image
-        imageUrl =
-          "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop";
+        // For iframe projects, we'll use a placeholder but could show iframe preview
+        imageUrl = noPhoto;
+        useIframe = true;
       }
 
       return {
@@ -49,6 +44,8 @@ const PortfolioProjects = () => {
           featuredDescriptions[project.id] ||
           project.description.substring(0, 150) + "...",
         image: imageUrl,
+        useIframe: useIframe,
+        iframeUrl: project.imgIFrame,
         tech: project.tech,
         category: category,
         liveUrl: project.website || project.imgIFrame || "#",
@@ -63,7 +60,7 @@ const PortfolioProjects = () => {
 
   const categories = [
     { key: "all", label: "All Projects" },
-    { key: "web", label: "Frontend" },
+    { key: "frontend", label: "Frontend" },
     { key: "fullstack", label: "Full Stack" },
     { key: "backend", label: "Backend" },
   ];
@@ -111,11 +108,26 @@ const PortfolioProjects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="portfolio-projects__card-image">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="portfolio-projects__image"
-                />
+                {project.useIframe ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="portfolio-projects__iframe-link"
+                  >
+                    <IframePreview
+                      src={project.iframeUrl}
+                      title={project.title}
+                      className="portfolio-projects__iframe"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="portfolio-projects__image"
+                  />
+                )}
                 <div className="portfolio-projects__overlay">
                   <div className="portfolio-projects__links">
                     {project.liveUrl !== "#" && (

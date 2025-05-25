@@ -66,7 +66,7 @@ const Hero = () => {
             <div className="hero__avatar">
               <div className="hero__avatar-image">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+                  src="/src/assets/profilepic.jpg"
                   alt="Todd Williams"
                   className="hero__avatar-img"
                 />

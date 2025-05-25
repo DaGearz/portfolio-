@@ -96,6 +96,18 @@
   transition: transform var(--transition-slow);
 }
 
+.portfolio-projects__iframe-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.portfolio-projects__iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .portfolio-projects__card:hover .portfolio-projects__image {
   transform: scale(1.05);
 }

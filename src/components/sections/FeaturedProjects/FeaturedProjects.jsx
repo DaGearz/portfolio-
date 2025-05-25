@@ -2,44 +2,51 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "../../ui/Card/Card";
 import Button from "../../ui/Button/Button";
+import IframePreview from "../../ui/IframePreview/IframePreview";
+import projectsData from "../../../data/projectsData";
+import noPhoto from "../../../assets/noPhoto.png";
 import "./FeaturedProjects.css";
 
 const FeaturedProjects = () => {
-  const featuredProjects = [
-    {
-      id: 1,
-      title: "Into The Abyss",
-      description:
-        "A dark fantasy adventure game built with modern web technologies. Features immersive storytelling and interactive gameplay.",
-      image: "/api/placeholder/400/250",
-      tech: ["React", "JavaScript", "CSS3"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "MERN Stack Application",
-      description:
-        "Full-stack web application demonstrating CRUD operations, user authentication, and responsive design.",
-      image: "/api/placeholder/400/250",
-      tech: ["MongoDB", "Express", "React", "Node.js"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true,
-    },
-    {
-      id: 3,
-      title: "Portfolio Website",
-      description:
-        "Modern, responsive portfolio website showcasing projects and skills with clean design and smooth animations.",
-      image: "/api/placeholder/400/250",
-      tech: ["React", "CSS3", "JavaScript"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true,
-    },
-  ];
+  // Get featured projects from your actual data
+  const featuredProjects = projectsData
+    .filter((project) => project.useFeatured && project.usePortfolio)
+    .map((project) => {
+      // Create featured descriptions for homepage display
+      const featuredDescriptions = {
+        1: "My personal developer portfolio built from scratch with React. Features responsive design and showcases my technical capabilities.",
+        2: "Interactive React app that translates text to Pig Latin in real-time. Demonstrates controlled components and event handling.",
+        3: "React app integrating Google Maps API for visualizing KMZ data. Shows third-party API consumption and map rendering.",
+        4: "Full-stack MERN application for note-taking. Covers RESTful APIs, MongoDB integration, and React-to-backend communication.",
+        5: "Custom Git implementation in Python called 'daggit'. Recreates core Git functionality including file tracking and hashing.",
+      };
+
+      // Get image - use project image, iframe, or fallback
+      let imageUrl = noPhoto;
+      let useIframe = false;
+
+      if (project.img) {
+        imageUrl = project.img;
+      } else if (project.imgIFrame) {
+        useIframe = true;
+      }
+
+      return {
+        id: project.id,
+        title: project.title,
+        description:
+          featuredDescriptions[project.id] ||
+          project.description.substring(0, 120) + "...",
+        image: imageUrl,
+        useIframe: useIframe,
+        iframeUrl: project.imgIFrame,
+        tech: project.tech.slice(0, 4), // Limit to 4 tech tags for clean display
+        liveUrl: project.website || project.imgIFrame || "#",
+        githubUrl: project.git1[0] || "#",
+        githubUrl2: project.git2[0] || null,
+        hasBackend: project.git2[0] !== null,
+      };
+    });
 
   return (
     <section className="featured-projects">
@@ -62,31 +69,59 @@ const FeaturedProjects = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="featured-projects__card-image">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="featured-projects__image"
-                />
+                {project.useIframe ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="featured-projects__iframe-link"
+                  >
+                    <IframePreview
+                      src={project.iframeUrl}
+                      title={project.title}
+                      className="featured-projects__iframe"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="featured-projects__image"
+                  />
+                )}
                 <div className="featured-projects__overlay">
                   <div className="featured-projects__links">
-                    <Button variant="primary" size="sm">
+                    {project.liveUrl !== "#" && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Live Demo
+                        <Button variant="primary" size="sm">
+                          Live Demo
+                        </Button>
                       </a>
-                    </Button>
-                    <Button variant="outline" size="sm">
+                    )}
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" size="sm">
+                        {project.hasBackend ? "Frontend" : "GitHub"}
+                      </Button>
+                    </a>
+                    {project.githubUrl2 && (
                       <a
-                        href={project.githubUrl}
+                        href={project.githubUrl2}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        GitHub
+                        <Button variant="outline" size="sm">
+                          Backend
+                        </Button>
                       </a>
-                    </Button>
+                    )}
                   </div>
                 </div>
               </div>
