@@ -19,7 +19,10 @@ const CartoonMyImage = () => {
           className={styles.grayImg}
           style={{ clipPath: `inset(0 ${100 - sliderValue}% 0 0)` }}
         />
-        <div className={styles.divider} style={{ left: `${sliderValue}%` }} />
+        <div
+          className={styles.divider}
+          style={{ left: `${sliderValue}%` }}
+        />
       </div>
 
       <input
