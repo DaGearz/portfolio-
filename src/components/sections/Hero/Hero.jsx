@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../ui/Button/Button";
+import profilePic from "../../../assets/profilepic.jpg";
 import "./Hero.css";
 
 const Hero = () => {
@@ -66,7 +67,7 @@ const Hero = () => {
             <div className="hero__avatar">
               <div className="hero__avatar-image">
                 <img
-                  src="/src/assets/profilepic.jpg"
+                  src={profilePic}
                   alt="Todd Williams"
                   className="hero__avatar-img"
                 />

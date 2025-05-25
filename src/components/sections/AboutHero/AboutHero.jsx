@@ -3,6 +3,7 @@ import {
   getCodingExperienceNumber,
   getCodingExperienceText,
 } from "../../../utils/dateUtils";
+import profilePic from "../../../assets/profilepic.jpg";
 import "./AboutHero.css";
 
 const AboutHero = () => {
@@ -27,7 +28,7 @@ const AboutHero = () => {
           <div className="about-hero__image">
             <div className="about-hero__image-wrapper">
               <img
-                src="/src/assets/profilepic.jpg"
+                src={profilePic}
                 alt="Todd Williams"
                 className="about-hero__img"
               />
