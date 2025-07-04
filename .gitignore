@@ -27,3 +27,5 @@ dist-ssr
 
 # Personal documentation (keep private)
 WEBSITE_GUIDE.md
+
+.jigsawtechie-config.json
