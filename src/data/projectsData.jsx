@@ -1,9 +1,14 @@
 import noPhoto from "../assets/noPhoto.png";
 import daggit from "../assets/daggit_demo.png";
 import mernstack from "../assets/mernstack.png";
+import jigsawtechie from "../assets/jigsawtechie.com_.png";
 
-// For debugging - log image imports
-console.log("Image imports loaded:", { noPhoto, daggit, mernstack });
+console.log("Image imports loaded:", {
+  noPhoto,
+  daggit,
+  mernstack,
+  jigsawtechie,
+});
 
 const projectsData = [
   {
@@ -82,12 +87,19 @@ const projectsData = [
     useFeatured: true,
   },
   {
-  id: 6,
-    title: "Custom Made GIT",
-    description: "This project marks my first full-stack production deployment and the launch of my tech company, Jigsaw Techie. The business initially focuses on delivering fast-turnaround web development services. As I continue to grow my skills—especially in Python—I plan to expand into additional service offerings. I navigated the full business formation process, starting as a sole proprietorship and later transitioning into an LLC. This project highlights my ability to quickly learn and apply both new technologies and business processes.",
-    img: null,
-    imgIFrame: "https://jigsawtechie.com/",
-    tech: ["Nexta.js", "Tailwind", "Vercel", "Suppabase", "Bussiness-Formation"]
+    id: 6,
+    title: "My First Company",
+    description:
+      "This project marks my first full-stack production deployment and the launch of my tech company, Jigsaw Techie. The business initially focuses on delivering fast-turnaround web development services. As I continue to grow my skills—especially in Python—I plan to expand into additional service offerings. I navigated the full business formation process, starting as a sole proprietorship and later transitioning into an LLC. This project highlights my ability to quickly learn and apply both new technologies and business processes.",
+    img: jigsawtechie,
+    imgIFrame: null, // Note: May not display due to X-Frame-Options
+    tech: [
+      "Nexta.js",
+      "Tailwind",
+      "Vercel",
+      "Suppabase",
+      "Bussiness-Formation",
+    ],
     category: "fullstack", // Options: "frontend", "backend", "fullstack"
     git1: ["https://github.com/DaGearz/JigSawTechie", "Code"],
     git2: [null],

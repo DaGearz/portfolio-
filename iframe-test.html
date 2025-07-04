@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iframe Test</title>
+    <style>
+        iframe {
+            width: 800px;
+            height: 600px;
+            border: 2px solid #ccc;
+            margin: 20px;
+        }
+        .test-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iframe Embedding Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: toddwilliams.dev (Should Work)</h2>
+        <iframe src="https://www.toddwilliams.dev/" title="Todd Williams Portfolio"></iframe>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: jigsawtechie.com (May Not Work)</h2>
+        <iframe src="https://jigsawtechie.com/" title="Jigsaw Techie"></iframe>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: GitHub Pages Example (Should Work)</h2>
+        <iframe src="https://dagearz.github.io/language_game/" title="Language Game"></iframe>
+    </div>
+    
+    <script>
+        // Log iframe load events
+        document.querySelectorAll('iframe').forEach((iframe, index) => {
+            iframe.onload = () => console.log(`Iframe ${index + 1} loaded successfully`);
+            iframe.onerror = () => console.log(`Iframe ${index + 1} failed to load`);
+        });
+    </script>
+</body>
+</html>
