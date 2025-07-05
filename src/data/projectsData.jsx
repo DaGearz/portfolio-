@@ -101,6 +101,20 @@ const projectsData = [
     usePortfolio: true,
     useFeatured: true,
   },
+  {
+    id: 7,
+    title: "Banking System",
+    description: "A small python project demonstrating class inheritance.",
+    img: noPhoto,
+    imgIFrame: null,
+    tech: ["Python"],
+    category: "backend", // Options: "frontend", "backend", "fullstack"
+    git1: ["https://github.com/DaGearz/python_banking_system", "Code"],
+    git2: [null],
+    website: null,
+    usePortfolio: true,
+    useFeatured: false,
+  },
 ];
 
 export default projectsData;
