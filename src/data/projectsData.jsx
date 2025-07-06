@@ -115,6 +115,21 @@ const projectsData = [
     usePortfolio: true,
     useFeatured: false,
   },
+  {
+    id: 8,
+    title: "Note Taking App",
+    description:
+      "A small note taking app in python. The site is deployed through render. It demonstraits authentication and database connection. I followed  a tutorial from Tech with Tim for the code. I deployed the project through render.",
+    img: null,
+    imgIFrame: "https://flask-notes-app-p6jb.onrender.com/",
+    tech: ["Python", "Render", "Flask", "SQLAlchemy"],
+    category: "fullstacll", // Options: "frontend", "backend", "fullstack"
+    git1: ["https://github.com/DaGearz/Flask_Tutorial_1", "Code"],
+    git2: [null],
+    website: "https://flask-notes-app-p6jb.onrender.com/",
+    usePortfolio: true,
+    useFeatured: false,
+  },
 ];
 
 export default projectsData;
