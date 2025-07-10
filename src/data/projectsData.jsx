@@ -95,7 +95,7 @@ const projectsData = [
     imgIFrame: null, // Note: May not display due to X-Frame-Options
     tech: ["Next.js", "Tailwind", "Vercel", "Suppabase", "Bussiness-Formation"],
     category: "fullstack", // Options: "frontend", "backend", "fullstack"
-    git1: ["https://github.com/DaGearz/JigSawTechie", "Code"],
+    git1: [null],
     git2: [null],
     website: "https://jigsawtechie.com/",
     usePortfolio: true,
