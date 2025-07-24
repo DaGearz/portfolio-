@@ -102,15 +102,17 @@ const FeaturedProjects = () => {
                         </Button>
                       </a>
                     )}
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button variant="outline" size="sm">
-                        {project.hasBackend ? "Frontend" : "GitHub"}
-                      </Button>
-                    </a>
+                    {project.githubUrl !== "#" && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline" size="sm">
+                          {project.hasBackend ? "Frontend" : "GitHub"}
+                        </Button>
+                      </a>
+                    )}
                     {project.githubUrl2 && (
                       <a
                         href={project.githubUrl2}

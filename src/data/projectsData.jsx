@@ -2,6 +2,7 @@ import noPhoto from "../assets/noPhoto.png";
 import daggit from "../assets/daggit_demo.png";
 import mernstack from "../assets/mernstack.png";
 import jigsawtechie from "../assets/jigsawtechie.com_.png";
+//import revampedJigsaw from "../assets/revampedJigsaw.png";
 
 console.log("Image imports loaded:", {
   noPhoto,
@@ -88,18 +89,18 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "My First Company",
+    title: "Jigsaw Techie",
     description:
-      "This project marks my first full-stack production deployment and the launch of my tech company, Jigsaw Techie. The business initially focuses on delivering fast-turnaround web development services. As I continue to grow my skills—especially in Python—I plan to expand into additional service offerings. I navigated the full business formation process, starting as a sole proprietorship and later transitioning into an LLC. This project highlights my ability to quickly learn and apply both new technologies and business processes.",
+      "I created a company called Jigsaw Techie LLC. This is a full stack website done in Next.js with a Supabase database. It is deployed to Vercel. I discontinued this webiste",
     img: jigsawtechie,
     imgIFrame: null, // Note: May not display due to X-Frame-Options
     tech: ["Next.js", "Tailwind", "Vercel", "Suppabase", "Bussiness-Formation"],
     category: "fullstack", // Options: "frontend", "backend", "fullstack"
-    git1: [null],
+    git1: ["https://github.com/DaGearz/JigSawTechie", "Code"],
     git2: [null],
-    website: "https://jigsawtechie.com/",
-    usePortfolio: true,
-    useFeatured: true,
+    website: null,
+    usePortfolio: false,
+    useFeatured: false,
   },
   {
     id: 7,
@@ -129,6 +130,21 @@ const projectsData = [
     website: "https://flask-notes-app-p6jb.onrender.com/",
     usePortfolio: true,
     useFeatured: false,
+  },
+  {
+    id: 9,
+    title: "Revamped Jigsaw Techie",
+    description:
+      "I created a company called Jigsaw Techie LLC. This is a full stack website done in Django with a PostgreSQL database. It is deployed to Vercel. I discontinued this webiste",
+    img: null,
+    imgIFrame: null, // Note: May not display due to X-Frame-Options
+    tech: ["Python", "Bootstrap", "Render", "PostgreSQL", "Django"],
+    category: "fullstack", // Options: "frontend", "backend", "fullstack"
+    git1: [null],
+    git2: [null],
+    website: null,
+    usePortfolio: true,
+    useFeatured: true,
   },
 ];
 
